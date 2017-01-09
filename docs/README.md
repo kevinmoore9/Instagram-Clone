@@ -24,11 +24,11 @@ satisfy the following criteria:
 
 ## Design Docs
 
-[View Wireframes](wireframes)
-[React Components](component-hierarchy.md)
-[API Endpoints](api-endpoints.md)
-[DB Schema](schema.md)
-[Sample State](sample-state.md)
+[View Wireframes](wireframes) \s\s
+[React Components](component-hierarchy.md) \s\s
+[API Endpoints](api-endpoints.md) \s\s
+[DB Schema](schema.md) \s\s
+[Sample State](sample-state.md) \s\s
 
 ## Implementation Timeline
 

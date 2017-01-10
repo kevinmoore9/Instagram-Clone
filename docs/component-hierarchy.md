@@ -10,19 +10,24 @@
   * NotificationItem
 * ProfileButton
 
-**HomeContainer**
-* Images
+**FeedContainer**
+* FeedIndex
+  * FeedIndexItem
+    * CommentForm
+      * LikeButton
 
 **ProfileContainer**
 * ProfileHeader
 * LogOut Button
-* ImageDetail
+* ProfileIndex
+  * ProfileIndexItem
 
 **ImageContainer**
 * ImageHeader
 * Comments
-* CommentForm
 * Likes
+* CommentForm
+  * Like Button
 
 **PostFormContainer**
 * PostForm
@@ -33,8 +38,7 @@
 | --------------------------  | ------------------- |
 | "/sign-up"                  | "AuthFormContainer" |
 | "/login"                    | "AuthFormContainer" |
-| "/home"                     | "HomeContainer"     |
-| "/images"                   | "HomeContainer"     |
+| "/"                         | "FeedContainer"     |
 | "/users/:username"          | "ProfileContainer"  |
 | "/users/:username/:imageId" | "ImageContainer"    |
-| "/users/:username/post"     | "PostContainer"     |
+| "/users/:username/post"     | "PostFormContainer"     |

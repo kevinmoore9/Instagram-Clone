@@ -38,17 +38,17 @@ satisfy the following criteria:
 ### Phase 2: Image Model, API, Component (1 day)
 **Objective:** Images can be created and destroyed through API.
 
-### Phase 3: Home Container and NavBar (2 days)
-**Objective:** Image feed of followed users. Navigation bar has functional home/profile buttons, user search, and toggle-show for like and follow notifications.
-
-### Phase 4: Comment Model, API, Form & Like Model, API (1 day)
-**Objective:** Users can comment on and like photos.
-
-### Phase 5: Post Form and User Profile Page (1 day)
+### Phase 3: Post Form and User Profile Page (1 day)
 **Objective:** User profile page displays all of a users posted photos as well as profile information. Post form allows users to post new photos.
 
-### Phase 6: Add Infinite Scroll to Home Page (1 day)
-**Objective:** Title says it all.
+### Phase 4: Home Container and NavBar (2 days)
+**Objective:** Image feed of followed users. Navigation bar has functional home/profile buttons, user search, and toggle-show for like and follow notifications.
+
+### Phase 5: Comment Model, API, Form (1 day)
+**Objective:** Users can comment on and like photos.
+
+### Phase 6: Like Model, API (1 day)
+**Objective:** Users can like photos. Photos count likes.
 
 ### Phase 7: CSS Touch Up (1 day)
 **Objective:** Finalize all features and finish formatting and display of presentational components.
@@ -56,6 +56,7 @@ satisfy the following criteria:
 
 ### Bonus Features (TBD Time Permitting)
 
+* Infinite Scroll
 * Comment Tags (direct messages)
 * HashTags
 * User / HashTag search

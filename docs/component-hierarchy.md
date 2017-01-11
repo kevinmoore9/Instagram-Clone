@@ -1,7 +1,7 @@
 ## Component Hierarchy
 
-**AuthFormContainer**
-* AuthForm
+**SessionFormContainer**
+* SessionForm
 
 **Navbar**
 * Search
@@ -34,11 +34,11 @@
 
 ## Routes
 
-| Path                        | Component           |
-| --------------------------  | ------------------- |
-| "/sign-up"                  | "AuthFormContainer" |
-| "/login"                    | "AuthFormContainer" |
-| "/"                         | "FeedContainer"     |
-| "/users/:username"          | "ProfileContainer"  |
-| "/users/:username/:imageId" | "ImageContainer"    |
-| "/users/:username/post"     | "PostFormContainer"     |
+| Path                        | Component              |
+| --------------------------  | ---------------------- |
+| "/signup"                   | "SessionFormContainer" |
+| "/login"                    | "SessionFormContainer" |
+| "/"                         | "FeedContainer"        |
+| "/users/:username"          | "ProfileContainer"     |
+| "/users/:username/:imageId" | "ImageContainer"       |
+| "/users/:username/post"     | "PostFormContainer"    |

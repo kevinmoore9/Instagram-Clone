@@ -1,3 +1,15 @@
 // Place all the styles related to the api/sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.login-form-container {
+  justify-content: center;
+  margin-top: 15px;
+  max-width: 350px;
+}
+
+a.login-toggle-link {
+  color: red;
+  border: 1px solid red;
+
+}

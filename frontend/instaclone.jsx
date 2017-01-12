@@ -4,13 +4,29 @@ import Root from './components/root';
 
 import configureStore from './store/store';
 import { login, logout } from './actions/session_actions';
+import { fetchPhoto, fetchPhotos, createPhoto } from './actions/photo_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
-  const store = configureStore();
+  let store;
+  if (window.currentUser) {
+    const preloadedState = { session: {currentUser: window.currentUser }};
+    store = configureStore(preloadedState);
+  } else {
+    store = configureStore();
+  }
+
   window.store = store;
+
+  // session actions
   window.login = login;
   window.logout = logout;
+
+  // photo actions
+  window.fetchPhoto = fetchPhoto;
+  window.fetchPhotos = fetchPhotos;
+  window.createPhoto = createPhoto;
+
   ReactDOM.render(<Root store={store} />, root);
 
 });

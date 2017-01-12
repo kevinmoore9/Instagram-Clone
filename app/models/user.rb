@@ -15,6 +15,9 @@ class User < ApplicationRecord
 
   attr_reader :password
 
+  # associations
+  has_many :photos
+
   ## model level validations
   validates :username, :password_digest, :session_token, presence: true
   validates :username, uniqueness: true

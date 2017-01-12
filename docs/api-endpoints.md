@@ -16,9 +16,9 @@
 * POST /api/session
 * DELETE /api/session
 
-**Images**
-* GET /api/images
-* GET /api/users/:imageId
-* POST /api/images
-* PATCH /api/images/:imageId
-* DELETE /api/images/:imageId
+**Photos**
+* GET /api/photos
+* GET /api/users/:photoId
+* POST /api/photos
+* PATCH /api/photos/:photoId
+* DELETE /api/photos/:photoId

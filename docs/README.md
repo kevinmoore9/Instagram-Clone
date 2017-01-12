@@ -57,6 +57,8 @@ satisfy the following criteria:
 ### Bonus Features (TBD Time Permitting)
 
 * Infinite Scroll
+* Edit Posts
+* Edit User Profile
 * Comment Tags (direct messages)
 * HashTags
 * User / HashTag search

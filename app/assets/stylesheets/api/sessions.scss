@@ -2,14 +2,76 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#root {
+  // display: flex;
+}
+
 .login-form-container {
-  justify-content: center;
-  margin-top: 15px;
   max-width: 350px;
+  justify-content: center;
+  margin: auto;
+  margin-top: 100px;
+}
+
+
+.login-form-container div {
+
+}
+
+.login-form-box {
+  border: 1px solid #D3D3D3;
+  border-radius: 4px;
+  padding: 25px;
+}
+
+
+.login-form-box h2 {
+  // text-align: center;
+  font-size: 44px;
+}
+
+.login-form-box h2, h3, p, li {
+  text-align: center;
+}
+
+.login-form-box h3 { //temporary placeholder
+
+}
+
+.login-form-box p { //temporary placeholder
+  // text-align: center;
+  color: #3897f0;
+}
+
+.login-form-box input {
+  position: relative;
+  left: -8px;
+  border: 1px solid #D3D3D3;
+  border-radius: 3px;
+  padding: 5px;
+  margin: 3px;
+  width: 100%;
+  font-family: sans-serif;
+  font-weight: 200;
+  font-size: 13px;
+}
+
+.login-button {
+  text-align: center;
+  color: white;
+  background-color: #3897f0;
+  font-weight: 600;
+}
+
+.toggle-login-box {
+  text-align: center;
+  border: 1px solid #D3D3D3;
+  padding: 20px;
+  border-radius: 4px;
+  margin-top: 25px;
 }
 
 a.login-toggle-link {
-  color: red;
-  border: 1px solid red;
+  color: #3897f0;
 
 }

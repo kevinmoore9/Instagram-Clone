@@ -56,17 +56,20 @@ class SessionForm extends React.Component {
       ? "Don't have an account?"
       : "Already have an account?";
 
+    const submitText = this.props.formType === "login"
+      ? "Log In"
+      : "Sign Up";
+
+    const guest = {user: {username: "kevinmoore", password: "password"}};
+
+
 		return (
 
 
 
 			<div className="login-form-container">
-        <div className="credentials-box" >
-
   				<form onSubmit={this.handleSubmit} className="login-form-box">
-  					InstaClone
-  					<br/>
-            <div className="login-form">
+              <h2>Instaclone</h2>
               <br/>
               <input
                 type="text"
@@ -82,11 +85,12 @@ class SessionForm extends React.Component {
                 onChange={this.update("password")}
                 className="login-input" />
               <br/>
-              <input type="submit" value={this.props.formType}/>
-            </div>
-            {this.renderErrors()}
+              <input type="submit" value={submitText} className="login-button"/>
+              {this.renderErrors()}
+              <br/><h3>OR</h3><br/>
+              <p>Log in as guest</p>
           </form>
-        </div>
+
         <div className="toggle-login-box">
           {toggleText} {this.navLink()}
         </div>
@@ -98,22 +102,7 @@ class SessionForm extends React.Component {
 
 export default withRouter(SessionForm);
 
-
-// <div className="login-form">
-//   <br/>
-//   <label> Username:
-//     <input type="text"
-//       value={this.state.username}
-//       onChange={this.update("username")}
-//       className="login-input" />
-//   </label>
-//   <br/>
-//   <label> Password:
-//     <input type="password"
-//       value={this.state.password}
-//       onChange={this.update("password")}
-//       className="login-input" />
-//   </label>
-//   <br/>
-//   <input type="submit" value="Submit" />
-// </div>
+// <header>
+//   <img src="https://5a5a57ff32a328601212-ee0df397c56b146e91fe14be42fa361d.ssl.cf1.rackcdn.com/icon/instagram_logos_glyph/03H5cHNMt-Jni4pe9u+7/glyph-logo_May2016_200.png"/>
+//   <h3>Placeholder</h3>
+// </header>

@@ -5,6 +5,7 @@ import Root from './components/root';
 import configureStore from './store/store';
 import { login, logout } from './actions/session_actions';
 import { fetchPhoto, fetchPhotos, createPhoto } from './actions/photo_actions';
+import { fetchUser } from './actions/user_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
@@ -26,6 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
   window.fetchPhoto = fetchPhoto;
   window.fetchPhotos = fetchPhotos;
   window.createPhoto = createPhoto;
+
+  // user actions
+  window.fetchUser = fetchUser;
 
   ReactDOM.render(<Root store={store} />, root);
 

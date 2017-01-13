@@ -9,8 +9,8 @@
 
 **Users**
 * POST /api/users
-* PATCH /api/users
-* GET /api/users/:username
+* PATCH /api/users ***
+* GET /api/users/:username ***
 
 **Sessions**
 * POST /api/session
@@ -18,7 +18,8 @@
 
 **Photos**
 * GET /api/photos
-* GET /api/users/:photoId
+* GET /api/photos/:photoId
+* GET /api/users/:photoId ***
 * POST /api/photos
-* PATCH /api/photos/:photoId
+* PATCH /api/photos/:photoId ***
 * DELETE /api/photos/:photoId

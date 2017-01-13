@@ -39,6 +39,6 @@
 | "/signup"                   | "SessionFormContainer" |
 | "/login"                    | "SessionFormContainer" |
 | "/"                         | "FeedContainer"        |
-| "/users/:username"          | "ProfileContainer"     |
+| "/users/:username"          | "UserProfileContainer"     |
 | "/users/:username/:imageId" | "ImageContainer"       |
-| "/users/:username/post"     | "PostFormContainer"    |
+| "/post"     | "PostFormContainer"    |

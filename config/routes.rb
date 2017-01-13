@@ -5,11 +5,14 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     resources :photos, only: [:create, :destroy, :show, :index]
 
-    resource :user, only: [:create]
+    resources :users, only: [:create, :show]
     resource :session, only: [:create, :destroy, :show]
   end
 
 end
 
-# consider removing photos: :show
-  # will be using front end routes to render show
+#check all routes are being used
+
+
+# changed to :users, here, session_api_util, user_api_util,
+  # users controller

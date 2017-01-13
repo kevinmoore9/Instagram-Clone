@@ -5,7 +5,7 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 // react components
 import App from './app';
 import SessionFormContainer from './session_form/session_form_container';
-
+import FeedContainer from './feed/feed_container';
 const Root = ({ store }) => {
 
   const _ensureLoggedIn = (nextState, replace) => {
@@ -27,6 +27,7 @@ const Root = ({ store }) => {
     <Provider store={ store }>
       <Router history={ hashHistory } >
         <Route path="/" component={App} >
+          <IndexRoute component={FeedContainer}/>
           <Route
             path="login"
             component={SessionFormContainer}

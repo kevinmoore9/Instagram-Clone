@@ -14,8 +14,8 @@
 }
 
 
-.login-form-container div {
-
+.login-form-container * {
+  background-color: white;
 }
 
 .login-form-box {
@@ -52,7 +52,7 @@
   margin: 3px;
   width: 100%;
   font-family: sans-serif;
-  font-weight: 200;
+  font-weight: 100;
   font-size: 13px;
 }
 

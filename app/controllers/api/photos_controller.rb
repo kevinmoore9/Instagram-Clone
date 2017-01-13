@@ -1,4 +1,4 @@
-class PhotosController < ApplicationController
+class Api::PhotosController < ApplicationController
 
   def create
     @photo = Photo.new(photo_params)
@@ -16,7 +16,7 @@ class PhotosController < ApplicationController
   end
 
   def index
-    @photos = Photo.all
+    @photos = Photo.all.includes(:user)
   end
 
   def show

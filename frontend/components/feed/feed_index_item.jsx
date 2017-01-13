@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
+import CommentForm from '../comments/comment_form';
 
 const FeedIndexItem = ({photo}) => {
   let user = photo.username;
@@ -12,12 +13,12 @@ const FeedIndexItem = ({photo}) => {
         <p className="username">{user}</p>
       </div>
       <img className="index-img"src={photo.image_url}></img>
+      <CommentForm photo={photo} />
     </div>
   );
 };
 
-export default FeedIndexItem;
+export default withRouter(FeedIndexItem);
 
-// <h3 className="username">{photo.user_id}</h3>
 
-// <h2>{user}</h2>
+// change photo={photo} to comments={photo.comments}

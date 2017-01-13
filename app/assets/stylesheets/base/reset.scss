@@ -18,7 +18,8 @@ header {
   display: flex;
   justify-content: space-between;
   height: 75px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid grey;
+  background-color: white;
 }
 [data-reactroot] {
   width: 100%;

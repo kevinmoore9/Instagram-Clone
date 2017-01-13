@@ -12,9 +12,11 @@ guest = User.create(username: "guest", password: "password",
 sports_news = User.create(username: "sports_news", password: "espn",
   profile_img_url: "https://images.pexels.com/photos/47730/the-ball-stadion-football-the-pitch-47730.jpeg?h=350&auto=compress")
 
-photos = Photo.create(user_id: guest.id,
-  image_url: "https://images.pexels.com/photos/111085/pexels-photo-111085.jpeg?h=350&auto=compress",
-  caption: "Why am I holding a surfboard?! There aren't any waves..."),
-  Photo.create(user_id: sports_news.id,
-  image_url: "https://images.pexels.com/photos/106218/pexels-photo-106218.jpeg?h=350&auto=compress&cs=tinysrgb",
-  caption: "Almost time for baseball season.")
+Photo.create([
+  { user_id: guest.id,
+    image_url: "https://images.pexels.com/photos/111085/pexels-photo-111085.jpeg?h=350&auto=compress",
+    caption: "Why am I holding a surfboard?! There aren't any waves..." },
+  { user_id: sports_news.id,
+    image_url: "https://images.pexels.com/photos/106218/pexels-photo-106218.jpeg?h=350&auto=compress&cs=tinysrgb",
+    caption: "Almost time for baseball season." }
+    ])

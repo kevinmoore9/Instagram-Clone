@@ -16,7 +16,12 @@ class Api::PhotosController < ApplicationController
   end
 
   def index
-    @photos = Photo.all.includes(:user)
+    if params[:userId]
+      @photos = Photo.all.includes(:user).where("user_id = ?", params[:userId])
+    else
+      @photos = Photo.all.includes(:user)
+    end
+
   end
 
   def show

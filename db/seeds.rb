@@ -23,5 +23,3 @@ Photo.create!(
   user_id: sports_news.id,
   image_url: "https://images.pexels.com/photos/106218/pexels-photo-106218.jpeg?h=350&auto=compress&cs=tinysrgb",
   caption: "Almost time for baseball season.")
-
-# a;ldjf;

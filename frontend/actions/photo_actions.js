@@ -23,10 +23,11 @@ export const fetchPhoto = id => dispatch => (
     .then(photo => dispatch(receivePhoto(photo)))
 );
 
-export const fetchPhotos = () => dispatch => (
-  PhotoApiUtil.fetchPhotos()
+export const fetchPhotos = filters => dispatch => {
+  return (PhotoApiUtil.fetchPhotos(filters)
     .then(photos => dispatch(receivePhotos(photos)))
 );
+};
 
 
 

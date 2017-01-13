@@ -6,6 +6,8 @@ import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import App from './app';
 import SessionFormContainer from './session_form/session_form_container';
 import FeedContainer from './feed/feed_container';
+import UserProfileContainer from './user_profile/user_profile_container';
+
 const Root = ({ store }) => {
 
   const _ensureLoggedIn = (nextState, replace) => {
@@ -38,6 +40,7 @@ const Root = ({ store }) => {
             component={SessionFormContainer}
             onEnter={_redirectIfLoggedIn}
             />
+          <Route path="users/:userId" component={UserProfileContainer} />
         </Route>
 
       </Router>

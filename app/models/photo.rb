@@ -12,6 +12,8 @@
 
 class Photo < ApplicationRecord
   belongs_to :user
+  has_many :likes
+  has_many :comments
 
   validates :user_id, :image_url, presence: true
 end

@@ -23,3 +23,17 @@ Photo.create!(
   user_id: sports_news.id,
   image_url: "https://images.pexels.com/photos/106218/pexels-photo-106218.jpeg?h=350&auto=compress&cs=tinysrgb",
   caption: "Almost time for baseball season.")
+
+5.times do
+  Photo.create!(
+  user_id: guest.id,
+  image_url: Faker::LoremPixel.unique.image
+  )
+end
+
+5.times do
+  Photo.create!(
+  user_id: sports_news.id,
+  image_url: Faker::LoremPixel.unique.image("300x300", false, 'sports')
+  )
+end

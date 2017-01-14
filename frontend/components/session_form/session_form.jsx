@@ -85,7 +85,7 @@ class SessionForm extends React.Component {
               <input type="submit" value={submitText} className="login-button"/>
               {this.renderErrors()}
               <br/><h3>OR</h3><br/>
-              <p>Log in as guest</p>
+              <p>Log in as guest (dead)</p>
           </form>
 
         <div className="toggle-login-box">

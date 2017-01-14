@@ -1,0 +1,40 @@
+
+header {
+  // display: flex;
+  // justify-content: space-between;
+  height: 75px;
+  width: 100%;
+  border-bottom: 1px solid grey;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+.nav-bar {
+  max-width: 1000px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: inherit;
+}
+
+.home-link {
+  height: 40px;
+  width: 175px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: inherit;
+}
+
+.home-link img {
+  width: 35px;
+  padding-right: 17px;
+  border-right: 1px solid;
+  background-color: inherit;
+}
+
+.home-link h1 {
+  font-size: 28px;
+  background-color: inherit;
+}

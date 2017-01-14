@@ -1,22 +1,23 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
 import { fetchUser } from '../../actions/user_actions';
-import ProfileIndexItem from './profile_index_item';
+// import ProfileIndexItem from './profile_index_item';
 import ProfileHeader from './profile_header';
 
 class UserProfileIndex extends React.Component {
   constructor(props) {
     super(props);
-    // const user = this.props.fetchUser(this.props.params.userId);
   }
 
   componentDidMount() {
     this.props.fetchPhotos(this.props.params.userId);
+    this.props.fetchUser(this.props.params.userId);
   }
 
   componentWillUpdate(newProps) {
     if (this.props.params.userId !== newProps.params.userId) {
       this.props.fetchPhotos(newProps.params.userId);
+      this.props.fetchUser(newProps.params.userId);
     }
   }
 
@@ -24,10 +25,12 @@ class UserProfileIndex extends React.Component {
   render() {
     return (
       <div className="user-profile" >
-
+        <ProfileHeader />
         <div className="profile-index">
           {this.props.photos.map(
-            photo => <ProfileIndexItem key={photo.id} photo={photo} />
+            photo => <img src={photo.image_url}
+                          className="profile-index-image"
+                          key={photo.id}/>
         )}
         </div>
       </div>

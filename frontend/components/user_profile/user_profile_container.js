@@ -8,7 +8,7 @@ const mapStateToProps = ({photos}) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  // fetchUser: dispatch(userId => fetchUser(userId))
+  fetchUser: userId =>  dispatch(fetchUser(userId)),
   fetchPhotos: userId => dispatch(fetchPhotos({userId}))
 });
 

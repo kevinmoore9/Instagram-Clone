@@ -10,7 +10,8 @@ const FeedIndexItem = ({photo}) => {
         <img
           src={photo.user_profile_url}
           className="index-profile-img"></img>
-        <p className="username">{user}</p>
+        <Link to={`/users/${photo.user_id}`}
+              className="username">{user}</Link>
       </div>
       <img className="index-img"src={photo.image_url}></img>
       <CommentForm photo={photo} />

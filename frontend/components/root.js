@@ -28,8 +28,10 @@ const Root = ({ store }) => {
   return (
     <Provider store={ store }>
       <Router history={ hashHistory } >
-        <Route path="/" component={App} >
-          <IndexRoute component={FeedContainer}/>
+        <Route path="/"
+               component={App} >
+          <IndexRoute component={FeedContainer}
+                      onEnter={_ensureLoggedIn} />
           <Route
             path="login"
             component={SessionFormContainer}
@@ -40,7 +42,9 @@ const Root = ({ store }) => {
             component={SessionFormContainer}
             onEnter={_redirectIfLoggedIn}
             />
-          <Route path="users/:userId" component={UserProfileContainer} />
+          <Route path="users/:userId"
+                 component={UserProfileContainer}
+                 onEnter={_ensureLoggedIn} />
         </Route>
 
       </Router>

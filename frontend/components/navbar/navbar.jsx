@@ -10,11 +10,15 @@ class NavBar extends React.Component {
     return (
       <header>
         <div className="nav-bar">
-          <div className="home-link">
+          <Link to={'/'}className="home-link">
             <img src="https://image.freepik.com/free-icon/instagram-photo-camera-logo-outline_318-56004.jpg"></img>
             <h1>Instagram</h1>
-          </div>
-          <p>placeholder2</p>
+          </Link>
+          <input placeholder="search - dead"
+                 className="search-bar"/>
+               <div className="nav-menu">
+                 <p>placeholder</p>
+                </div>
         </div>
       </header>
     );

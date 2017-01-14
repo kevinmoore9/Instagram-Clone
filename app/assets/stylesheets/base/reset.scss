@@ -11,12 +11,13 @@
   box-sizing: inherit;
   background: transparent;
   list-style: none;
-  background-color: #F5F5F5;
+  background-color: inherit;
 }
 
 [data-reactroot] {
   width: 100%;
   height: 100%;
+  background-color: #F5F5F5;
 }
 
 @font-face{

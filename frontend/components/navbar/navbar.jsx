@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import FontAwesome from 'react-fontawesome';
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -12,7 +13,8 @@ class NavBar extends React.Component {
         <div className="nav-bar">
           <Link to={'/'}className="home-link">
             <img src="https://image.freepik.com/free-icon/instagram-photo-camera-logo-outline_318-56004.jpg"></img>
-            <h1>Instagram</h1>
+            <h1>Instaclone</h1>
+
           </Link>
 
           <input placeholder="search -- dead"

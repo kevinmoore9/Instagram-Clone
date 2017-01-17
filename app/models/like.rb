@@ -14,4 +14,5 @@ class Like < ApplicationRecord
   belongs_to :photo
 
   validates :photo_id, :user_id, presence: true
+
 end

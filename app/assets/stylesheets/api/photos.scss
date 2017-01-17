@@ -14,6 +14,7 @@
   width: 100%;
   margin-top: 60px;
   background-color: white;
+  font-family: sans-serif;
 }
 
 .index-img {
@@ -44,6 +45,12 @@
 
 // Profile Index Item
 
-.profile-index-item:hover img {
+.profile-index-image:hover {
   opacity: 0.4;
+}
+
+.profile-index-image {
+  height: 280px;
+  width: 280px;
+  padding-right: 30px;
 }

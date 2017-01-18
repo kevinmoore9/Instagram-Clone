@@ -6,6 +6,7 @@ class SessionForm extends React.Component {
 		super(props);
 		this.state = { username: "", password: "" };
 		this.handleSubmit = this.handleSubmit.bind(this);
+		this.handleGuest = this.handleGuest.bind(this);
 	}
 
 	componentDidUpdate() {
@@ -28,6 +29,12 @@ class SessionForm extends React.Component {
 	handleSubmit(e) {
 		e.preventDefault();
 		const user = this.state;
+		this.props.processForm({user});
+	}
+
+	handleGuest(e) {
+		e.preventDefault();
+		const user = { username: "guest", password: "password" };
 		this.props.processForm({user});
 	}
 
@@ -66,7 +73,9 @@ class SessionForm extends React.Component {
 
 		return (
 			<div className="login-form-container">
-  				<form onSubmit={this.handleSubmit} className="login-form-box">
+				<div className="login-form-box">
+
+  				<form onSubmit={this.handleSubmit}>
               <h2>Instaclone</h2>
               <br/>
               <input
@@ -86,12 +95,18 @@ class SessionForm extends React.Component {
               <input type="submit" value={submitText} className="login-button"/>
               {this.renderErrors()}
               <br/><h3>OR</h3><br/>
-							<p>Log in as guest</p>
           </form>
+					<form onSubmit={this.handleGuest}>
+						<input
+							id="guest-login"
+							type="submit"
+							value="Log in as guest" />
+					</form>
+				</div>
 
-        <div className="toggle-login-box">
-          {toggleText} {this.navLink()}
-        </div>
+					<div className="toggle-login-box">
+						{toggleText} {this.navLink()}
+					</div>
 			</div>
 		);
 	}
@@ -99,8 +114,3 @@ class SessionForm extends React.Component {
 }
 
 export default withRouter(SessionForm);
-
-// <header>
-//   <img src="https://5a5a57ff32a328601212-ee0df397c56b146e91fe14be42fa361d.ssl.cf1.rackcdn.com/icon/instagram_logos_glyph/03H5cHNMt-Jni4pe9u+7/glyph-logo_May2016_200.png"/>
-//   <h3>Placeholder</h3>
-// </header>

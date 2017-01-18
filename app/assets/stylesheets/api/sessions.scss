@@ -27,6 +27,7 @@
 
 .login-form-box h2 {
   // text-align: center;
+  font-family: 'Lobster Two', cursive;
   font-size: 44px;
 }
 
@@ -38,9 +39,14 @@
 
 }
 
-.login-form-box p { //temporary placeholder
-  // text-align: center;
+#guest-login  {
+  position: relative;
+  top: -5px;
   color: #3897f0;
+  text-align: center;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .login-form-box input {

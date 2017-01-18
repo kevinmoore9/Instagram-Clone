@@ -14,7 +14,3 @@ Rails.application.routes.draw do
 end
 
 #check all routes are being used
-
-
-# changed to :users, here, session_api_util, user_api_util,
-  # users controller

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
 import Comment from './comment';
-import { createLike } from '../../util/like_api_util';
 
 class CommentForm extends React.Component {
   constructor(props) {
@@ -37,13 +36,8 @@ class CommentForm extends React.Component {
   }
 
 
-
   render () {
     const like = this.props.photo.likes.length === 1 ? "like" : "likes";
-    // const likeParams = (store.getState().session.currentUser
-    //   ? {user_id: store.getState().session.currentUser.id,
-    //      photo_id: this.props.photo.id}
-    //    : null);
 
     return (
       <div className="comment-section">

@@ -17,7 +17,7 @@ sports_news = User.create!(username: "sports_news", password: "espn123",
 Photo.create!(
   user_id: guest.id,
   image_url: "https://images.pexels.com/photos/111085/pexels-photo-111085.jpeg?h=350&auto=compress",
-  caption: "Why am I holding a surfboard?! There aren't any waves...")
+  caption: "Sunset surf!")
 
 Photo.create!(
   user_id: sports_news.id,

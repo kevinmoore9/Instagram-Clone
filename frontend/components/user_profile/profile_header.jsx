@@ -3,6 +3,13 @@ import { Link, withRouter } from 'react-router';
 
 const ProfileHeader = props => {
   const user = store.getState().profileDetail;
+  const currentUser = store.getState().session.currentUser;
+
+  const postLink = (user.id === currentUser.id
+        ? <p>+</p>
+        : null
+      );
+
   return (
     <div className="profile-header">
       <img src={user.profile_img_url}className="profile-picture"/>
@@ -10,7 +17,7 @@ const ProfileHeader = props => {
         <div>
           <p className="username">{user.username}</p>
           <p>Following/not</p>
-          <p>...</p>
+          {postLink}
         </div>
         <div>
           <p>posts</p>

@@ -6,6 +6,14 @@ export const createPhoto = (photo) => (
   })
 );
 
+export const updatePhoto = (photo) => (
+  $.ajax({
+    method: 'PATCH',
+    url: `/api/photos/${photo.id}`,
+    data: photo
+  })
+);
+
 export const fetchPhoto = (id) => (
   $.ajax({
     method: 'GET',

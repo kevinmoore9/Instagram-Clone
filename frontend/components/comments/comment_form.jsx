@@ -5,6 +5,8 @@ import Comment from './comment';
 class CommentForm extends React.Component {
   constructor(props) {
     super(props);
+    console.log(this.props);
+    this.updatePhoto = this.props.updatePhoto.bind(this);
   }
 
   compressComments() {
@@ -35,10 +37,17 @@ class CommentForm extends React.Component {
     }
   }
 
+  addComment() {
+
+  }
+
+  addLike(photoId) {
+    this.updatePhoto(this.props.photo);
+  }
+
 
   render () {
     const like = this.props.photo.likes.length === 1 ? "like" : "likes";
-
     return (
       <div className="comment-section">
         <div className="likes">
@@ -53,9 +62,13 @@ class CommentForm extends React.Component {
           {this.renderComments()}
         </div>
         <div className="form">
-          <img className="like-button"
-               src="https://maxcdn.icons8.com/Share/icon/Messaging//like1600.png"
+          <form onSubmit={this.addLike(this.props.photo.id)}>
+          <input type="image"
+                 alt="submit"
+                 className="like-button"
+                src="https://maxcdn.icons8.com/Share/icon/Messaging//like1600.png"
                />
+          </form>
              <textarea className="comment-form"
                  type="text"
                  placeholder="Add a comment..."

@@ -1,7 +1,8 @@
 import { connect } from 'react-redux';
 import { createPhoto,
          fetchPhoto,
-         fetchPhotos } from '../../actions/photo_actions';
+         fetchPhotos,
+        updatePhoto} from '../../actions/photo_actions';
 import FeedIndex from './feed_index';
 
 const mapStateToProps = ({photos}) => ({
@@ -9,6 +10,7 @@ const mapStateToProps = ({photos}) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
+  updatePhoto: photo => dispatch(updatePhoto(photo)),
   fetchPhotos: () => dispatch(fetchPhotos())
 });
 

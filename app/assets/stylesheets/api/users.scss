@@ -4,7 +4,7 @@
 
 // Profile Index
 .user-profile {
-  max-width: 900px;
+  max-width: 920px;
   margin: auto;
 }
 
@@ -12,19 +12,19 @@
 
 .profile-header {
   display: flex;
-  width: 100%;
+  width: 900px;
   height: 150px;
   margin-top: 55px;
   margin-bottom: 40px;
-  border: 1px solid gray; // remove
+
 }
 
 .profile-picture {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  margin-right: 30px;
-  margin-left: 30px;
+  margin-right: 90px;
+  margin-left: 70px;
 }
 
 .profile-info {
@@ -40,10 +40,6 @@
   font-weight: 300;
 }
 
-.top-line {
-
-}
-
-.bottom-line {
-
+.profile-header .top-line {
+  padding-top: 30px;
 }

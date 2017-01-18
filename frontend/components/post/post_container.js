@@ -2,11 +2,11 @@ import { connect } from 'react-redux';
 import { createPhoto } from '../../actions/photo_actions';
 import PostForm from './post_form';
 
-const mapStateToProps = ({session}) => ({
-  currentUser: session.currentUser
-});
+const mapStateToProps = (props) => {
+    return( {currentUser: props.session.currentUser });
+};
 
-const mapDispatchToProps = (dispatch, ownProps) => ({
+const mapDispatchToProps = (dispatch) => ({
   createPhoto: photo => dispatch(createPhoto(photo))
 });
 

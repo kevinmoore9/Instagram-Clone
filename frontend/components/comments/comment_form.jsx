@@ -5,8 +5,7 @@ import Comment from './comment';
 class CommentForm extends React.Component {
   constructor(props) {
     super(props);
-    console.log(this.props);
-    this.updatePhoto = this.props.updatePhoto.bind(this);
+    // this.updatePhoto = this.props.updatePhoto.bind(this);
   }
 
   compressComments() {
@@ -42,7 +41,9 @@ class CommentForm extends React.Component {
   }
 
   addLike(photoId) {
-    this.updatePhoto(this.props.photo);
+    debugger
+    return null;
+    // this.updatePhoto(this.props.photo);
   }
 
 
@@ -62,13 +63,10 @@ class CommentForm extends React.Component {
           {this.renderComments()}
         </div>
         <div className="form">
-          <form onSubmit={this.addLike(this.props.photo.id)}>
-          <input type="image"
-                 alt="submit"
-                 className="like-button"
-                src="https://maxcdn.icons8.com/Share/icon/Messaging//like1600.png"
+          <img className="like-button"
+               src="https://maxcdn.icons8.com/Share/icon/Messaging//like1600.png"
+               onClick={this.addLike(this.props.photo.id)}
                />
-          </form>
              <textarea className="comment-form"
                  type="text"
                  placeholder="Add a comment..."
@@ -80,8 +78,3 @@ class CommentForm extends React.Component {
 }
 
 export default withRouter(CommentForm);
-
-
-// {this.comments.slice(this.comments.length - 4, this.comments.length).map(comment => (
-//   <Comment id={comment.id} comment={comment} />
-// ))}

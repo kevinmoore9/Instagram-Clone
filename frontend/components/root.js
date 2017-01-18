@@ -7,7 +7,7 @@ import App from './app';
 import SessionFormContainer from './session_form/session_form_container';
 import FeedContainer from './feed/feed_container';
 import UserProfileContainer from './user_profile/user_profile_container';
-// import PostFormContainer from './post/post_container';
+import PostFormContainer from './post/post_container';
 
 const Root = ({ store }) => {
 
@@ -46,6 +46,9 @@ const Root = ({ store }) => {
           <Route path="users/:userId"
                  component={UserProfileContainer}
                  onEnter={_ensureLoggedIn} />
+          <Route path="post"
+                 component={PostFormContainer}
+                 onEnter={_ensureLoggedIn} />
         </Route>
 
 
@@ -55,7 +58,3 @@ const Root = ({ store }) => {
 };
 
 export default Root;
-
-// <Route path="post"
-//   component={PostFormContainer}
-//   onEnter={_ensureLoggedIn} />

@@ -43,6 +43,18 @@
   font-size: 17px;
 }
 
+.stats {
+  width: 400px;
+  justify-content: space-between;
+  font-size: 16px;
+  padding-top: 20px;
+}
+
+.num {
+  font-weight: 600;
+  margin-right: 4px;
+}
+
 // Profile Index Item
 
 .profile-index-image:hover {
@@ -52,5 +64,5 @@
 .profile-index-image {
   height: 280px;
   width: 280px;
-  padding: 20px 0;
+  margin: 10px;
 }

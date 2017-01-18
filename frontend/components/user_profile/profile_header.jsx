@@ -5,24 +5,28 @@ const ProfileHeader = props => {
   const user = store.getState().profileDetail;
   const currentUser = store.getState().session.currentUser;
 
-  const postLink = (user.id === currentUser.id
-        ? <p>+</p>
-        : null
-      );
 
   return (
     <div className="profile-header">
       <img src={user.profile_img_url}className="profile-picture"/>
       <div className="profile-info">
-        <div>
+        <div className="top-line">
           <p className="username">{user.username}</p>
           <p>Following/not</p>
-          {postLink}
         </div>
-        <div>
-          <p>posts</p>
-          <p>followers</p>
-          <p>following</p>
+        <div className="stats">
+          <div>
+            <p className="num">12</p>
+            <p>posts</p>
+          </div>
+          <div>
+            <p className="num">43</p>
+            <p>followers</p>
+          </div>
+          <div>
+            <p className="num">31</p>
+            <p>following</p>
+          </div>
         </div>
       </div>
     </div>

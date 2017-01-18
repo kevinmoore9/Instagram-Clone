@@ -10,7 +10,6 @@ class NavBar extends React.Component {
   }
 
   handleSubmit(e) {
-    debugger
     e.preventDefault();
     logout();
   }
@@ -28,6 +27,10 @@ class NavBar extends React.Component {
           <input placeholder="search -- dead"
                  className="search-bar"/>
            <div className="nav-menu">
+             <Link className="upload-link"
+                   to={'/post'}>
+                   <img src="https://image.freepik.com/free-icon/upload-arrow-in-a-circle_318-30292.jpg"/>
+             </Link>
              <Link className="profile-link"
                    to={`/users/${currentUser.id}`}>
                <img src="https://image.freepik.com/free-icon/user-image-with-black-background_318-34564.jpg"></img>

@@ -1,0 +1,18 @@
+.upload-container {
+  width: 550px;
+  margin: auto;
+  border: 1px solid black;
+}
+.dropzone {
+  border: 1px solid blue;
+  height: 370px;
+}
+
+.dropzone img {
+  height: 100%;
+  width: 100%;
+}
+
+.upload-caption {
+  border: 1px solid green;
+}

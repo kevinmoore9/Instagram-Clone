@@ -20,7 +20,9 @@ class NavBar extends React.Component {
           <input placeholder="search -- dead"
                  className="search-bar"/>
            <div className="nav-menu">
-             <p>placeholder</p>
+             <Link className="profile-link">
+               <img src="https://image.freepik.com/free-icon/user-image-with-black-background_318-34564.jpg"></img>
+             </Link>
             </div>
         </div>
       </header>

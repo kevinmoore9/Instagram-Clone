@@ -28,3 +28,13 @@ Photo.create!(
   user_id: guest.id,
   image_url: "https://images.pexels.com/photos/103123/pexels-photo-103123.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"
 )
+
+Photo.create!(
+  user_id: guest.id,
+  image_url: "https://images.pexels.com/photos/198217/pexels-photo-198217.jpeg?h=350&auto=compress&cs=tinysrgb",
+  caption: "A very creative caption.")
+
+  Photo.create!(
+    user_id: guest.id,
+    image_url: "https://images.pexels.com/photos/104928/pexels-photo-104928.jpeg?h=350&auto=compress&cs=tinysrgb",
+    caption: "Great day for a hike!.")

@@ -11,9 +11,7 @@
 #
 
 class Comment < ApplicationRecord
-
   belongs_to :photo
 
   validates :photo_id, :user_id, :body, presence: true
-
 end

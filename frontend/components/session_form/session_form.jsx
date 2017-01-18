@@ -31,6 +31,7 @@ class SessionForm extends React.Component {
 		this.props.processForm({user});
 	}
 
+
 	navLink() {
 		if (this.props.formType === "login") {
 			return <Link to="/signup" className="login-toggle-link">Sign up</Link>;
@@ -85,7 +86,7 @@ class SessionForm extends React.Component {
               <input type="submit" value={submitText} className="login-button"/>
               {this.renderErrors()}
               <br/><h3>OR</h3><br/>
-              <p>Log in as guest (dead)</p>
+							<p>Log in as guest</p>
           </form>
 
         <div className="toggle-login-box">

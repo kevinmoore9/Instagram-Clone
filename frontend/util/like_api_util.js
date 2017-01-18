@@ -1,8 +1,8 @@
-export const createLike = (like) => (
+export const createLike = (params) => (
   $.ajax({
     method: 'POST',
     url: '/api/likes',
-    data: like
+    data: params
   })
 );
 

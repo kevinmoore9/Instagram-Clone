@@ -21,11 +21,11 @@
   font-weight: 500;
 }
 
-.comments {
+.comment {
   display: flex;
 }
 
-.comments .username {
+.comment .username {
   font-weight: 600;
   padding-right: 10px;
 }
@@ -52,4 +52,20 @@ padding-right: 10px;
   position: relative;
   top: 7px;
   width: 100%;
+}
+
+
+.comment-index-item {
+  width: 100%;
+  display: flex;
+}
+.comment-index-item h2 {
+  font-weight: 600;
+}
+.comment-index-item .username {
+  padding-right: 10px;
+}
+
+.compress-comments {
+  color: gray;
 }

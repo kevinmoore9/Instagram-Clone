@@ -3,7 +3,10 @@ import { Link, withRouter } from 'react-router';
 
 const Comment = ({comment}) => {
   return (
-    <p>comment</p>
+    <div className="comment-index-item">
+    <h2 className="username">username</h2>
+    <p>{comment.body}</p>
+    </div>
   );
 };
 

@@ -47,3 +47,12 @@ header {
 .nav-menu {
   width: 175px;
 }
+
+.profile-link {
+  display: flex;
+  justify-content: flex-end;
+}
+.profile-link img {
+  height: 35px;
+  width: 35px;
+}

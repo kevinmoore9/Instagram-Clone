@@ -37,12 +37,13 @@ class CommentForm extends React.Component {
     }
   }
   handleLike() {
-    console.log(this.props.photo);
-    if (this.props.photo) {
+    if (this.props.photo.liked === true) {
+      this.props.photo.likes = this.props.photo.likes - 1;
+      this.props.photo.liked = false;
+    } else {
       this.props.photo.likes = this.props.photo.likes + 1;
       this.props.photo.liked = true;
     }
-    console.log(this.props.photo);
     this.updatePhoto({photo: this.props.photo});
   }
 
@@ -64,7 +65,12 @@ class CommentForm extends React.Component {
         </div>
         <div className="form">
           <img className="like-button"
-               src="https://maxcdn.icons8.com/Share/icon/Messaging//like1600.png"
+               src={
+                 this.props.photo.liked
+                    ? "http://www.followers.co.il/wp-content/uploads/2016/01/1-2.png"
+                    : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Ei-heart.svg/2000px-Ei-heart.svg.png"
+                  }
+
                onClick={this.handleLike}
                />
              <textarea className="comment-form"

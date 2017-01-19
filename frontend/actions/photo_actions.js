@@ -20,7 +20,7 @@ export const createPhoto = params => dispatch => (
 
 export const updatePhoto = (params) => dispatch => {
 return(  PhotoApiUtil.updatePhoto(params)
-  .then(photo => dispatch(receivePhoto))
+  .then(photo => dispatch(receivePhoto(photo)))
 );
 };
 

@@ -14,10 +14,11 @@
 
 class Photo < ApplicationRecord
   belongs_to :user
-  # has_many :likes
   has_many :comments
-
   validates :user_id, :image_url, presence: true
+  after_initialize :init
 
-
+  def init
+    self.liked ||= false
+  end
 end

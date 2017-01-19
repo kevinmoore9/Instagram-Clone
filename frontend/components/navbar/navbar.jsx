@@ -21,11 +21,7 @@ class NavBar extends React.Component {
           <Link to={'/'}className="home-link">
             <img src="https://image.freepik.com/free-icon/instagram-photo-camera-logo-outline_318-56004.jpg"></img>
             <h1>Instaclone</h1>
-
           </Link>
-
-          <input placeholder="search -- dead"
-                 className="search-bar"/>
            <div className="nav-menu">
              <Link className="upload-link"
                    to={'/post'}>

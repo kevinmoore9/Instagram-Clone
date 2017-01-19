@@ -5,8 +5,13 @@ import Comment from './comment';
 class CommentForm extends React.Component {
   constructor(props) {
     super(props);
+    debugger
+    const newComment = "";
+
     this.updatePhoto = props.updatePhoto.bind(this);
     this.handleLike = this.handleLike.bind(this);
+    this.handleComment = this.handleComment.bind(this);
+
   }
 
   compressComments() {
@@ -36,6 +41,14 @@ class CommentForm extends React.Component {
       }
     }
   }
+
+  update() {
+    debugger
+    return e => (
+      this.comment = e.currentTarget.value
+    );
+  }
+
   handleLike() {
     if (this.props.photo.liked === true) {
       this.props.photo.likes = this.props.photo.likes - 1;
@@ -47,9 +60,14 @@ class CommentForm extends React.Component {
     this.updatePhoto({photo: this.props.photo});
   }
 
+  handleComment() {
+
+  }
+
 
   render () {
     const like = this.props.photo.likes === 1 ? "like" : "likes";
+    const comment = "";
     return (
       <div className="comment-section">
         <div className="likes">

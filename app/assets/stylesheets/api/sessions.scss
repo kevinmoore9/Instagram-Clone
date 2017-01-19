@@ -49,6 +49,10 @@
   font-weight: 500;
 }
 
+#guest-login:hover {
+  cursor: pointer;
+}
+
 .login-form-box input {
   position: relative;
   left: -8px;
@@ -67,6 +71,10 @@
   color: white;
   background-color: #3897f0;
   font-weight: 600;
+}
+
+.login-button:hover {
+  cursor: pointer;
 }
 
 .toggle-login-box {

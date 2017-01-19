@@ -91,9 +91,12 @@ class CommentForm extends React.Component {
 
                onClick={this.handleLike}
                />
-             <textarea className="comment-form"
+             <textarea
+                 className="comment-form"
                  type="text"
                  placeholder="Add a comment..."
+                 value={this.comment}
+                 onChange={this.update}
                  />
         </div>
       </div>
@@ -102,3 +105,5 @@ class CommentForm extends React.Component {
 }
 
 export default withRouter(CommentForm);
+
+// comment

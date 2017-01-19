@@ -8,12 +8,16 @@
 #  caption    :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  liked      :boolean          default("false")
+#  likes      :integer          default("0")
 #
 
 class Photo < ApplicationRecord
   belongs_to :user
-  has_many :likes
+  # has_many :likes
   has_many :comments
 
   validates :user_id, :image_url, presence: true
+
+
 end

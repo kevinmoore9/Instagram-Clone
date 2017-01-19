@@ -6,7 +6,7 @@ import configureStore from './store/store';
 import { login, logout } from './actions/session_actions';
 import { fetchPhoto, fetchPhotos, createPhoto } from './actions/photo_actions';
 import { createLike, fetchLikes, deleteLike } from './actions/like_actions';
-import { fetchUser } from './actions/user_actions';
+import { fetchUser, updateUser } from './actions/user_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // user actions
   window.fetchUser = fetchUser;
+  window.updateUser = updateUser;
 
   // like actions
   window.createLike = createLike;

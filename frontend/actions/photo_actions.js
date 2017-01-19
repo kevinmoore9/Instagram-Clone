@@ -18,10 +18,11 @@ export const createPhoto = params => dispatch => (
     .then(photo => dispatch(receivePhoto))
 );
 
-export const updatePhoto = params => dispatch => (
-  PhotoApiUtil.updatePhoto(params)
-    .then(photo => dispatch(receivePhoto))
+export const updatePhoto = (params) => dispatch => {
+return(  PhotoApiUtil.updatePhoto(params)
+  .then(photo => dispatch(receivePhoto))
 );
+};
 
 export const fetchPhoto = id => dispatch => (
   PhotoApiUtil.fetchPhoto(id)

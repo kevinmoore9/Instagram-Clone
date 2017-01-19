@@ -2,6 +2,7 @@ import { RECEIVE_PHOTO, RECEIVE_PHOTOS } from '../actions/photo_actions';
 import merge from 'lodash/merge';
 
 const photosReducer = (oldState = {}, action) => {
+  debugger
   Object.freeze(oldState);
   switch(action.type) {
     case RECEIVE_PHOTOS:

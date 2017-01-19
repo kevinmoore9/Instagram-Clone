@@ -5,7 +5,8 @@ import Comment from './comment';
 class CommentForm extends React.Component {
   constructor(props) {
     super(props);
-    // this.updatePhoto = this.props.updatePhoto.bind(this);
+    this.updatePhoto = props.updatePhoto.bind(this);
+    this.handleLike = this.handleLike.bind(this);
   }
 
   compressComments() {
@@ -35,24 +36,23 @@ class CommentForm extends React.Component {
       }
     }
   }
-
-  addComment() {
-
-  }
-
-  addLike(photoId) {
-    debugger
-    return null;
-    // this.updatePhoto(this.props.photo);
+  handleLike() {
+    console.log(this.props.photo);
+    if (this.props.photo) {
+      this.props.photo.likes = this.props.photo.likes + 1;
+      this.props.photo.liked = true;
+    }
+    console.log(this.props.photo);
+    this.updatePhoto({photo: this.props.photo});
   }
 
 
   render () {
-    const like = this.props.photo.likes.length === 1 ? "like" : "likes";
+    const like = this.props.photo.likes === 1 ? "like" : "likes";
     return (
       <div className="comment-section">
         <div className="likes">
-          <p> {this.props.photo.likes.length} {like}</p>
+          <p> {this.props.photo.likes} {like}</p>
         </div>
         <div className="comment">
           <h2 className="username">{this.props.photo.username}</h2>
@@ -65,7 +65,7 @@ class CommentForm extends React.Component {
         <div className="form">
           <img className="like-button"
                src="https://maxcdn.icons8.com/Share/icon/Messaging//like1600.png"
-               onClick={this.addLike(this.props.photo.id)}
+               onClick={this.handleLike}
                />
              <textarea className="comment-form"
                  type="text"

@@ -46,13 +46,26 @@
 .stats {
   width: 400px;
   justify-content: space-between;
-  font-size: 16px;
+  font-size: 17px;
   padding-top: 20px;
 }
 
 .num {
   font-weight: 600;
   margin-right: 4px;
+}
+
+.follow-button {
+  font-size: 22px;
+  margin-left: 50px;
+  border: 1px solid white;
+  background-color: green;
+  color: white;
+  width: 120px;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 5px;
+  height: 35px;
 }
 
 // Profile Index Item

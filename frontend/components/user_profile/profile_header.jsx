@@ -5,15 +5,15 @@ const ProfileHeader = props => {
   const user = store.getState().profileDetail;
   const currentUser = store.getState().session.currentUser;
 
-
   return (
     <div className="profile-header">
       <img src={user.profile_img_url}className="profile-picture"/>
       <div className="profile-info">
         <div className="top-line">
           <p className="username">{user.username}</p>
-          <p>Following/not</p>
+          <button className="follow-button">Following</button>
         </div>
+
         <div className="stats">
           <div>
             <p className="num">12</p>

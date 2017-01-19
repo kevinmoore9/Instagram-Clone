@@ -4,8 +4,8 @@ import { Link, withRouter } from 'react-router';
 const ProfileHeader = props => {
   const user = store.getState().profileDetail;
   const currentUser = store.getState().session.currentUser;
-
   return (
+
     <div className="profile-header">
       <img src={user.profile_img_url}className="profile-picture"/>
       <div className="profile-info">
@@ -16,7 +16,7 @@ const ProfileHeader = props => {
 
         <div className="stats">
           <div>
-            <p className="num">12</p>
+            <p className="num">5</p>
             <p>posts</p>
           </div>
           <div>
@@ -33,11 +33,5 @@ const ProfileHeader = props => {
   );
 };
 
-
-
-// <img
-//   src={props.profilePicture}
-//   className="main-profile-img"></img>
-// <p className="profile-username">{props.username}</p>
 
 export default withRouter(ProfileHeader);

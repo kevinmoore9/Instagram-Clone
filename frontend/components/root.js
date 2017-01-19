@@ -30,7 +30,7 @@ const Root = ({ store }) => {
     <Provider store={ store }>
       <Router history={ hashHistory } >
         <Route path="/"
-               component={App} >
+               component={App}>
           <IndexRoute component={FeedContainer}
                       onEnter={_ensureLoggedIn} />
           <Route

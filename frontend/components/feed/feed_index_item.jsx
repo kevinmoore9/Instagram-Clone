@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router';
 import CommentForm from '../comments/comment_form';
 
-const FeedIndexItem = ({photo, updatePhoto}) => {
+const FeedIndexItem = ({photo, updatePhoto, createComment}) => {
   let user = photo.username;
   return (
     <div className="feed-index-item">
@@ -14,7 +14,9 @@ const FeedIndexItem = ({photo, updatePhoto}) => {
               className="username">{user}</Link>
       </div>
       <img className="index-img"src={photo.image_url}></img>
-      <CommentForm photo={photo} updatePhoto={updatePhoto}/>
+      <CommentForm photo={photo}
+                   updatePhoto={updatePhoto}
+                   createComment={createComment}/>
     </div>
   );
 };

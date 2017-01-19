@@ -5,7 +5,6 @@ import Root from './components/root';
 import configureStore from './store/store';
 import { login, logout } from './actions/session_actions';
 import { fetchPhoto, fetchPhotos, createPhoto } from './actions/photo_actions';
-import { createLike, fetchLikes, deleteLike } from './actions/like_actions';
 import { fetchUser, updateUser } from './actions/user_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -33,10 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.fetchUser = fetchUser;
   window.updateUser = updateUser;
 
-  // like actions
-  window.createLike = createLike;
-  window.fetchLikes = fetchLikes;
-  window.deleeteLike = deleteLike;
+
 
   ReactDOM.render(<Root store={store} />, root);
 

@@ -2,6 +2,12 @@ import * as PhotoApiUtil from '../util/photo_api_util';
 
 export const RECEIVE_PHOTOS = "RECEIVE_PHOTOS";
 export const RECEIVE_PHOTO = "RECEIVE_PHOTO";
+export const RECEIVE_COMMENT = "RECEIVE_COMMENT";
+
+export const receiveComment = (comment) => ({
+  type: RECEIVE_COMMENT,
+  comment
+});
 
 export const receivePhotos = (photos) => ({
   type: RECEIVE_PHOTOS,
@@ -32,6 +38,13 @@ export const fetchPhoto = id => dispatch => (
 export const fetchPhotos = filters => dispatch => {
   return (PhotoApiUtil.fetchPhotos(filters)
     .then(photos => dispatch(receivePhotos(photos)))
+);
+};
+
+export const createComment = params => dispatch => {
+  return (
+  PhotoApiUtil.createComment(params)
+    .then(comment => dispatch(receiveComment(comment)))
 );
 };
 

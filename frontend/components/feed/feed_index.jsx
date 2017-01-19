@@ -15,7 +15,11 @@ class FeedIndex extends React.Component {
     return (
         <div className="feed-index-container" >
           {this.props.photos.map(
-            photo => <FeedIndexItem key={photo.id} photo={photo} updatePhoto={this.props.updatePhoto} />
+            photo => <FeedIndexItem
+                        key={photo.id}
+                        photo={photo}
+                        updatePhoto={this.props.updatePhoto}
+                        createComment={this.props.createComment} />
           )}
         </div>
       );

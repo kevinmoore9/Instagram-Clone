@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { updatePhoto } from '../../actions/photo_actions';
+import { updatePhoto, createComment } from '../../actions/photo_actions';
 import CommentForm from './comment_form';
 
 const mapStateToProps = (state) => ({
@@ -7,7 +7,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  updatePhoto: photo => dispatch(updatePhoto(photo))
+  updatePhoto: photo => dispatch(updatePhoto(photo)),
+  createComment: comment => dispatch(createComment(comment))
 });
 
 export default connect(

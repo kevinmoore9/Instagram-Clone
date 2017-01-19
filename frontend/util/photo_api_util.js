@@ -29,7 +29,15 @@ export const fetchPhotos = (data) => (
   })
 );
 
-
+export const createComment = params => {
+  return (
+  $.ajax ({
+    method: 'POST',
+    url: 'api/comments',
+    data: params
+  })
+);
+};
 
 
 

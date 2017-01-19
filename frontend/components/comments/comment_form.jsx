@@ -5,10 +5,14 @@ import Comment from './comment';
 class CommentForm extends React.Component {
   constructor(props) {
     super(props);
-    debugger
-    const newComment = "";
-
+    this.state = {
+        user_id: 1,
+        photo_id: 1,
+        body: ""
+    };
+    this.update = this.update.bind(this);
     this.updatePhoto = props.updatePhoto.bind(this);
+    this.createComment = props.createComment.bind(this);
     this.handleLike = this.handleLike.bind(this);
     this.handleComment = this.handleComment.bind(this);
 
@@ -42,10 +46,9 @@ class CommentForm extends React.Component {
     }
   }
 
-  update() {
-    debugger
-    return e => (
-      this.comment = e.currentTarget.value
+  update(e) {
+    return (
+      this.setState({ body: e.currentTarget.value })
     );
   }
 
@@ -61,7 +64,8 @@ class CommentForm extends React.Component {
   }
 
   handleComment() {
-
+    this.state.photo_id = this.props.photo.id;
+    this.createComment({comment: this.state});
   }
 
 
@@ -91,13 +95,15 @@ class CommentForm extends React.Component {
 
                onClick={this.handleLike}
                />
-             <textarea
+             <form onSubmit={this.handleComment}>
+               <input
                  className="comment-form"
                  type="text"
                  placeholder="Add a comment..."
-                 value={this.comment}
+                 value={this.state.body}
                  onChange={this.update}
                  />
+             </form>
         </div>
       </div>
     );

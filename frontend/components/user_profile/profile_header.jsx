@@ -4,14 +4,18 @@ import { Link, withRouter } from 'react-router';
 const ProfileHeader = props => {
   const user = store.getState().profileDetail;
   const currentUser = store.getState().session.currentUser;
+  const currentFolloweeIds = currentUser.followees
+          .map(followee => followee.id);
+  const followButton = currentFolloweeIds.includes(user.id)
+        ? <button className="following-button">Following</button>
+        : <button className="follow-button">Follow</button> ;
   return (
-
     <div className="profile-header">
       <img src={user.profile_img_url}className="profile-picture"/>
       <div className="profile-info">
         <div className="top-line">
           <p className="username">{user.username}</p>
-          <button className="follow-button">Following</button>
+          {followButton}
         </div>
 
         <div className="stats">

@@ -3,8 +3,10 @@ import { fetchUser } from '../../actions/user_actions';
 import { fetchPhotos } from '../../actions/photo_actions';
 import UserProfileIndex from './user_profile_index';
 
-const mapStateToProps = ({photos}) => ({
+const mapStateToProps = ({photos, session}) => ({
   photos: Object.keys(photos).map(id => photos[id])
+  // currentFolloweeIds: session.currentUser.followees
+  //   .map(followee => followee.id )
 });
 
 const mapDispatchToProps = dispatch => ({

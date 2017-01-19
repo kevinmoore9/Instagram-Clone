@@ -38,10 +38,10 @@ class CommentForm extends React.Component {
         );
       } else {
         return (
-          comments.slice(comments.length - 3, comments.length).map(comment => (
-            <Comment key={comment.id} comment={comment} />
-          ))
-        );
+          comments.slice(comments.length - 3, comments.length)
+            .map(comment => (
+              <Comment key={comment.id} comment={comment} />
+            )));
       }
     }
   }
@@ -111,5 +111,3 @@ class CommentForm extends React.Component {
 }
 
 export default withRouter(CommentForm);
-
-// comment

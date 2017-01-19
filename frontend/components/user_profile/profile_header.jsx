@@ -7,7 +7,7 @@ const ProfileHeader = props => {
   const currentFolloweeIds = currentUser.followees
           .map(followee => followee.id);
   const followButton = currentFolloweeIds.includes(user.id)
-        ? <button className="following-button">Following</button>
+        ? <button className="follow-button">Following</button>
         : <button className="follow-button">Follow</button> ;
   return (
     <div className="profile-header">

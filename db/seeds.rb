@@ -70,13 +70,9 @@ Photo.create!(
 
 Photo.create!(
   user_id: game_of_thrones.id,
-  image_url: "http://static2.businessinsider.com/image/56d991d5dd08953d0d8b4806-2000-1125/night%20king%20white%20walker%20hardhome%20game%20of%20thrones%20hbo.jpeg.jpg",
+  image_url: "http://res.cloudinary.com/dc4ro79uf/image/upload/v1484939373/winter_qudpym.jpg",
   caption: "Winter is here.")
 
-# Photo.create!(
-#   user_id: game_of_thrones.id,
-#   image_url: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwi4vcrOrdHRAhXDKGMKHQD_A2gQjBwIBA&url=http%3A%2F%2Fscreenrant.com%2Fwp-content%2Fuploads%2Fgame-of-thrones-the-iron-throne.jpg&psig=AFQjCNFkIKBTShJJ-x_V_zGlLETz4Qi4Og&ust=1485023398273585",
-#   caption: "2017 goals...")
 
 Photo.create!(
   user_id: warriors.id,
@@ -85,5 +81,5 @@ Photo.create!(
 
 Photo.create!(
   user_id: giants.id,
-  image_url: "http://www.pva.org/atf/cf/%7BCA2A0FFB-6859-4BC1-BC96-6B57F57F0391%7D/ATT-Park.jpg",
+  image_url: "http://res.cloudinary.com/dc4ro79uf/image/upload/v1484939414/att_kiupcm.jpg",
   caption: "Home sweet home. The giants were 50-32 at AT&T park last season. ")

@@ -38,7 +38,7 @@ class NavBar extends React.Component {
                 <input type="image"
                        alt="submit"
                        className="logout"
-                       src="http://image.flaticon.com/icons/png/128/56/56805.png"/>
+                       src="http://res.cloudinary.com/dc4ro79uf/image/upload/v1484939455/56805_uvj55h.png"/>
                 </form>
             </div>
         </div>

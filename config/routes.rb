@@ -12,5 +12,3 @@ Rails.application.routes.draw do
   end
 
 end
-
-#check all routes are being used

@@ -10,7 +10,6 @@
 | password_digest | string    | not null                  |
 | session_token   | string    | not null, indexed, unique |
 
-
 ### photos
 | column name | data type | details                                |
 | ----------- | --------- | ---------------------------------------|

@@ -11,8 +11,13 @@
 #
 
 class Comment < ApplicationRecord
+
   belongs_to :photo
   belongs_to :user
-
+  after_initialize :init
   validates :photo_id, :user_id, :body, presence: true
+
+  def init
+    self.username ||= User.find(user_id).username
+  end
 end

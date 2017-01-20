@@ -18,6 +18,7 @@ class Photo < ApplicationRecord
   validates :user_id, :image_url, presence: true
   after_initialize :init
 
+
   def init
     self.liked ||= false
   end

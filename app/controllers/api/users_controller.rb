@@ -18,7 +18,6 @@ class Api::UsersController < ApplicationController
   # add .includes to user for faster lookup
 
   def update
-    # debugger
     @user = User.find(params[:id])
     if @user.update(user_params)
       render :show

@@ -21,15 +21,15 @@ const ProfileHeader = props => {
 
         <div className="stats">
           <div>
-            <p className="num">5</p>
+            <p className="num">{Object.keys(store.getState().photos).length}</p>
             <p>posts</p>
           </div>
           <div>
-            <p className="num">43</p>
+            <p className="num">{user.followers ? user.followers.length : 0}</p>
             <p>followers</p>
           </div>
           <div>
-            <p className="num">31</p>
+            <p className="num">{user.followers ? user.followees.length : 0}</p>
             <p>following</p>
           </div>
         </div>

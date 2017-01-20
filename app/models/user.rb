@@ -15,6 +15,7 @@ class User < ApplicationRecord
 
   attr_reader :password
 
+
   # associations
   has_many :photos
 
@@ -29,9 +30,12 @@ class User < ApplicationRecord
   validates :username, uniqueness: true
   validates :password, length: { minimum: 6 }, allow_nil: :true
 
-  after_initialize :ensure_session_token
+  after_initialize :ensure_session_token, :init
   before_validation :ensure_session_token_uniqueness
 
+  def init
+    self.profile_img_url ||= "http://www.sunshineglobalhospitals.com/xadmin/myaccount/upload/default/profiledefault.png"
+  end
   ## auth form functions
   def password=(password)
     self.password_digest = BCrypt::Password.create(password)

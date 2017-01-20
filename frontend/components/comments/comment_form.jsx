@@ -6,7 +6,7 @@ class CommentForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-        user_id: 1,
+        user_id: store.getState().session.currentUser.id,
         photo_id: 1,
         body: ""
     };
@@ -22,7 +22,9 @@ class CommentForm extends React.Component {
     let comments = this.props.photo.comments;
     if (comments.length > 3) {
       return (
-        <Link className="compress-comments">view all {comments.length} comments (dead)</Link>
+        <Link className="compress-comments">
+          view all {comments.length} comments (dead)
+        </Link>
       );
     }
   }
@@ -45,6 +47,10 @@ class CommentForm extends React.Component {
       }
     }
   }
+
+  // renderComments(comments) {
+  //
+  // }
 
   update(e) {
     return (

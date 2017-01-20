@@ -48,10 +48,6 @@ class CommentForm extends React.Component {
     }
   }
 
-  // renderComments(comments) {
-  //
-  // }
-
   update(e) {
     return (
       this.setState({ body: e.currentTarget.value })

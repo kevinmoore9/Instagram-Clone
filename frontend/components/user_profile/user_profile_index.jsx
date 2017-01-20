@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
-import { fetchUser } from '../../actions/user_actions';
+import { fetchUser, updateUser } from '../../actions/user_actions';
 // import ProfileIndexItem from './profile_index_item';
 import ProfileHeader from './profile_header';
 
@@ -32,7 +32,7 @@ class UserProfileIndex extends React.Component {
     console.log("render");
     return (
       <div className="user-profile" >
-        <ProfileHeader />
+        <ProfileHeader updateUser={this.props.updateUser}/>
         <div className="profile-index">
           {this.props.photos.map(
             photo => <img src={photo.image_url}

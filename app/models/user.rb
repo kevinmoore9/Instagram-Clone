@@ -9,6 +9,7 @@
 #  session_token   :string           not null
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  followers       :integer          is an Array
 #
 
 class User < ApplicationRecord
@@ -18,12 +19,6 @@ class User < ApplicationRecord
 
   # associations
   has_many :photos
-
-  has_many :in_follows, class_name: "Follow", foreign_key: "followee_id"
-  has_many :out_follows, class_name: "Follow", foreign_key: "follower_id"
-  has_many :followers, through: :in_follows, source: :follower
-  has_many :followees, through: :out_follows, source: :followee
-
 
   ## model level validations
   validates :username, :password_digest, :session_token, presence: true
@@ -35,6 +30,8 @@ class User < ApplicationRecord
 
   def init
     self.profile_img_url ||= "http://www.sunshineglobalhospitals.com/xadmin/myaccount/upload/default/profiledefault.png"
+    self.followers ||= 0
+    self.followed ||= false
   end
   ## auth form functions
   def password=(password)

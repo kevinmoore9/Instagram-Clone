@@ -4,4 +4,4 @@ json.id user.id
 json.username user.username
 json.profile_img_url user.profile_img_url
 json.followers user.followers
-json.followees user.followees
+json.followed user.followed

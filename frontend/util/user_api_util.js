@@ -12,3 +12,14 @@ export const updateUser = user => (
     data: user
   })
 );
+
+export const updateFollow = follow => {
+
+  return (
+    $.ajax({
+      method: 'POST',
+      url: '/api/follows',
+      data: follow
+    })
+  );
+};

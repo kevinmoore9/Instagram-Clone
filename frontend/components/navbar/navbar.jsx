@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, hashHistory } from 'react-router';
 import { logout } from '../../actions/session_actions';
 
 class NavBar extends React.Component {
@@ -9,9 +9,12 @@ class NavBar extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+
+
   handleSubmit(e) {
     e.preventDefault();
     store.dispatch(logout());
+    hashHistory.push('/login');
   }
 
   render() {
@@ -20,7 +23,7 @@ class NavBar extends React.Component {
         <div className="nav-bar">
           <Link to={'/'}className="home-link">
             <img src="https://image.freepik.com/free-icon/instagram-photo-camera-logo-outline_318-56004.jpg"></img>
-            <h1>Instaclone</h1>
+            <h1>Pixtagram</h1>
           </Link>
            <div className="nav-menu">
              <Link className="upload-link"

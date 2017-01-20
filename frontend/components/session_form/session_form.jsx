@@ -76,7 +76,7 @@ class SessionForm extends React.Component {
 				<div className="login-form-box">
 
   				<form onSubmit={this.handleSubmit}>
-              <h2>Instaclone</h2>
+              <h2>Pixtagram</h2>
               <br/>
               <input
                 type="text"

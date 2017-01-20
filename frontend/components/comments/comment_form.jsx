@@ -18,21 +18,11 @@ class CommentForm extends React.Component {
 
   }
 
-  compressComments() {
-    let comments = this.props.photo.comments;
-    if (comments.length > 3) {
-      return (
-        <Link className="compress-comments">
-          view all {comments.length} comments (dead)
-        </Link>
-      );
-    }
-  }
 
   renderComments() {
     let comments = this.props.photo.comments;
     if (comments) {
-      if (comments.length < 4) {
+      if (comments.length < 7) {
         return (
           comments.map(comment => (
             <Comment key={comment.id} comment={comment}/>
@@ -40,7 +30,7 @@ class CommentForm extends React.Component {
         );
       } else {
         return (
-          comments.slice(comments.length - 3, comments.length)
+          comments.slice(comments.length - 7, comments.length)
             .map(comment => (
               <Comment key={comment.id} comment={comment} />
             )));
@@ -85,7 +75,7 @@ class CommentForm extends React.Component {
           <p>{this.props.photo.caption}</p>
         </div>
         <div className="comments">
-          {this.compressComments()}
+
           {this.renderComments()}
         </div>
         <div className="form">

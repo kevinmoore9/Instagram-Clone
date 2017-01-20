@@ -1,19 +1,72 @@
 .upload-container {
   width: 550px;
   margin: auto;
-  border: 1px solid black;
+  margin-top: 100px;
 }
+
+.upload-container h1 {
+  font-size: 40px;
+  height: 60px;
+  text-align: center;
+  background-color: white;
+  font-family: 'Lobster Two', cursive;
+  border: 1px solid #D5D5D5;
+  border-radius: 3px;
+}
+
 .dropzone {
   border: 1px solid blue;
   height: 370px;
+  background-color: lightgray;
+  border: 1px dashed #D5D5D5;
+  border: 1px solid #D5D5D5;
 }
 
-.dropzone img {
+.dropzone .button {
+  padding: 5px;
+  background-color: green;
+  color: white;
+  width: 200px;
+  margin: 40px 0 0 170px;
+  border-radius: 4px;
+}
+
+.dropzone p {
+  margin-top: 40px;
+}
+
+.upload-image {
   height: 100%;
   width: 100%;
 }
 
+.upload-icon {
+  height: 100px;
+  width: 150px;
+  margin: 60px 0 0 200px;
+}
+
 .upload-caption {
-  border: 1px solid green;
-  
+  background-color: white;
+  width: 548px;
+  height: 100px;
+  border: 1px solid #D5D5D5;
+  border-radius: 3px;
+}
+
+.dropzone h1 {
+  text-align: center;
+  font-size: 40px;
+  height: 60px;
+  background-color: white;
+
+}
+
+.upload-button {
+  margin: 20px 210px;
+  border: 1px solid lightgrey;
+  border-radius: 2px;
+  padding: 20px 40px;
+  font-family: 'Lobster Two', cursive;
+  font-size: 28px;
 }

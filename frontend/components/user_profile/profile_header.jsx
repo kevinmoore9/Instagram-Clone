@@ -6,16 +6,17 @@ const ProfileHeader = props => {
   const currentUser = store.getState().session.currentUser;
   const currentFolloweeIds = currentUser.followees
           .map(followee => followee.id);
-  const followButton = currentFolloweeIds.includes(user.id)
-        ? <button className="follow-button">Following</button>
-        : <button className="follow-button">Follow</button> ;
+  let following = currentFolloweeIds.includes(user.id)
+                  ? true : false ;
   return (
     <div className="profile-header">
       <img src={user.profile_img_url}className="profile-picture"/>
       <div className="profile-info">
         <div className="top-line">
           <p className="username">{user.username}</p>
-          {followButton}
+          <button className="follow-button" >
+            {following ? "Following" : "Follow"}
+          </button>
         </div>
 
         <div className="stats">

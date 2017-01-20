@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchUser } from '../../actions/user_actions';
+import { fetchUser, updateCurrentUser } from '../../actions/user_actions';
 import { fetchPhotos } from '../../actions/photo_actions';
 import UserProfileIndex from './user_profile_index';
 
@@ -11,7 +11,8 @@ const mapStateToProps = ({photos, session}) => ({
 
 const mapDispatchToProps = dispatch => ({
   fetchUser: userId =>  dispatch(fetchUser(userId)),
-  fetchPhotos: userId => dispatch(fetchPhotos({userId}))
+  fetchPhotos: userId => dispatch(fetchPhotos({userId})),
+  updateCurrentUser: user => dispatch(updateCurrentUser(user))
 });
 
 

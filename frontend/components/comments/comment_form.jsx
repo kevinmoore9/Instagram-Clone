@@ -66,6 +66,7 @@ class CommentForm extends React.Component {
   handleComment() {
     this.state.photo_id = this.props.photo.id;
     this.createComment({comment: this.state});
+    this.state.body = "";
   }
 
 

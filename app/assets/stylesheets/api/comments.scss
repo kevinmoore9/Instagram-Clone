@@ -52,8 +52,9 @@ padding-right: 10px;
   font-size: 15px;
   line-height: 18px;
   position: relative;
-  top: 7px;
-  width: 100%;
+  top: -2px;
+  width: 450px;
+  font-weight: 100;
 }
 
 
@@ -69,5 +70,7 @@ padding-right: 10px;
 }
 
 .compress-comments {
-  color: gray;
+  color: #999;
+  line-height: 18px;
+  font-size: 15px;
 }

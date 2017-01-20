@@ -72,15 +72,17 @@ class PostForm extends React.Component {
                 multiple={false}
                 accept="image/*"
                 onDrop={this.onImageDrop.bind(this)}>
-                <p>Drag and drop or click to upload.</p>
+                <img className="upload-icon" src="http://archisnapper.com/cloud.png"></img>
+                <p>Drag and drop a file here to upload</p>
+                <p className="button">Or choose an image</p>
               </Dropzone>
               :
               <div className="dropzone">
-                <img src={this.state.cloudUrl}/>
+                <img className="upload-image" src={this.state.cloudUrl}/>
               </div>
           }
         </div>
-
+        <div className="post-input">
             <input
               type="text"
               placeholder="Add a caption..."
@@ -88,6 +90,7 @@ class PostForm extends React.Component {
               onChange={this.update("caption")}
               className="upload-caption"/>
               <input type="submit" value="Upload" className="upload-button" />
+          </div>
         </form>
 
     );

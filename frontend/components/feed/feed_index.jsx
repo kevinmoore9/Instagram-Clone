@@ -16,7 +16,7 @@ class FeedIndex extends React.Component {
     return (
 
         <div className="feed-index-container" >
-          {this.props.photos.map(
+          {this.props.photos.reverse().map(
             photo => <FeedIndexItem
                         key={photo.id}
                         photo={photo}

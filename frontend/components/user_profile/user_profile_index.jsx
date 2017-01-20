@@ -3,6 +3,7 @@ import { Link, withRouter } from 'react-router';
 import { fetchUser, updateUser } from '../../actions/user_actions';
 // import ProfileIndexItem from './profile_index_item';
 import ProfileHeader from './profile_header';
+import NavBar from '../navbar/navbar';
 
 class UserProfileIndex extends React.Component {
   constructor(props) {
@@ -31,16 +32,19 @@ class UserProfileIndex extends React.Component {
   render() {
     console.log("render");
     return (
+      <div className="page">
+        <NavBar state={store.getState()} />
       <div className="user-profile" >
         <ProfileHeader updateUser={this.props.updateUser}/>
         <div className="profile-index">
           {this.props.photos.map(
             photo => <img src={photo.image_url}
-                          className="profile-index-image"
-                          key={photo.id}/>
+                          key={photo.id}
+                          className="profile-index-image"/>
         )}
         </div>
       </div>
+    </div>
       );
   }
 }

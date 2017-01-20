@@ -9,10 +9,11 @@ const App = (props) => {
 
   return (
     <div>
-      {navBar}
       {props.children}
     </div>
   );
 };
 
 export default App;
+
+// {navBar}

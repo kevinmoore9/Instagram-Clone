@@ -2,6 +2,7 @@ import React from 'react';
 import Dropzone from 'react-dropzone';
 import request from 'superagent';
 import { Link, withRouter, hashHistory } from 'react-router';
+import NavBar from '../navbar/navbar';
 
 const CLOUDINARY_UPLOAD_PRESET = "kmoore-insta";
 const CLOUDINARY_UPLOAD_URL = "https://api.cloudinary.com/v1_1/dc4ro79uf/image/upload";
@@ -61,6 +62,8 @@ class PostForm extends React.Component {
 
   render() {
     return (
+      <div className="page">
+        <NavBar state={store.getState()} />
       <form className="upload-container"
             onSubmit={this.handleSubmit}>
         <h1>Upload Photo</h1>
@@ -92,6 +95,7 @@ class PostForm extends React.Component {
               <input type="submit" value="Upload" className="upload-button" />
           </div>
         </form>
+      </div>
 
     );
   }

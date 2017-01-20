@@ -20,7 +20,13 @@ const photosReducer = (oldState = {}, action) => {
       return followedPhotos;
     case RECEIVE_COMMENT:
       let newState = merge({}, oldState);
-      newState[action.comment.photo].comments.push(action.comment);
+      let photo;
+      for (let i=1; i<= Object.keys(newState).length; i++) {
+        if (newState[i].id === action.comment.photo) {
+          photo = i;
+        }
+      }
+      newState[photo].comments.push(action.comment);
       return newState;
     default:
       return oldState;

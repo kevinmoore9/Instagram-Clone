@@ -14,7 +14,9 @@ class NavBar extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     store.dispatch(logout());
-    hashHistory.push('/login');
+    window.setTimeout(function () {
+      hashHistory.push('/login');
+    }, 100);
   }
 
   render() {
@@ -31,7 +33,7 @@ class NavBar extends React.Component {
                    <img src="https://image.freepik.com/free-icon/upload-arrow-in-a-circle_318-30292.jpg"/>
              </Link>
              <Link className="profile-link"
-                   to={`/users/${this.props.state.session.currentUser.id}`}>
+                   to={this.props.state.session.currentUser ? `/users/${this.props.state.session.currentUser.id}` : '/login'}>
                <img src="https://image.freepik.com/free-icon/user-image-with-black-background_318-34564.jpg"></img>
              </Link>
              <form onSubmit={this.handleSubmit}>

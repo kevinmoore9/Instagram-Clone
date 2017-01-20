@@ -62,8 +62,7 @@ class PostForm extends React.Component {
 
   render() {
     return (
-      <div className="page">
-        <NavBar state={store.getState()} />
+
       <form className="upload-container"
             onSubmit={this.handleSubmit}>
         <h1>Upload Photo</h1>
@@ -95,7 +94,6 @@ class PostForm extends React.Component {
               <input type="submit" value="Upload" className="upload-button" />
           </div>
         </form>
-      </div>
 
     );
   }

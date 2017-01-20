@@ -8,7 +8,6 @@ import SessionFormContainer from './session_form/session_form_container';
 import FeedContainer from './feed/feed_container';
 import UserProfileContainer from './user_profile/user_profile_container';
 import PostFormContainer from './post/post_container';
-import NavBarContainer from './navbar/navbar_container';
 
 const Root = ({ store }) => {
 

@@ -14,8 +14,7 @@ class FeedIndex extends React.Component {
 
   render() {
     return (
-      <div className="page">
-        <NavBar state={store.getState()} />
+
         <div className="feed-index-container" >
           {this.props.photos.map(
             photo => <FeedIndexItem
@@ -29,7 +28,6 @@ class FeedIndex extends React.Component {
              Explore More Photos!
            </p>
         </div>
-      </div>
       );
   }
 }

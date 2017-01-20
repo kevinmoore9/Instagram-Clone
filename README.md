@@ -1,24 +1,7 @@
-# README
+# Pixtagram
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Pixtagram live](kevinmoore.herokuapp.com)
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Pixtagram is a full stack web application clone of Instagram. It utilizes
+ruby on rails in the backend, a PostgreSQL database and React.js with a
+Redux framework in the frontend.

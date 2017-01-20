@@ -32,8 +32,7 @@ class UserProfileIndex extends React.Component {
   render() {
     console.log("render");
     return (
-      <div className="page">
-        <NavBar state={store.getState()} />
+
       <div className="user-profile" >
         <ProfileHeader updateUser={this.props.updateUser}/>
         <div className="profile-index">
@@ -44,7 +43,7 @@ class UserProfileIndex extends React.Component {
         )}
         </div>
       </div>
-    </div>
+
       );
   }
 }

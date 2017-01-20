@@ -74,7 +74,7 @@ class PostForm extends React.Component {
                 multiple={false}
                 accept="image/*"
                 onDrop={this.onImageDrop.bind(this)}>
-                <img className="upload-icon" src="http://res.cloudinary.com/dc4ro79uf/image/upload/v1484939529/cloud_kbngsp.png"></img>
+                <img className="upload-icon" src="https://res.cloudinary.com/dc4ro79uf/image/upload/v1484939529/cloud_kbngsp.png"></img>
                 <p>Drag and drop a file here to upload</p>
                 <p className="button">Or choose an image</p>
               </Dropzone>

@@ -10,41 +10,41 @@ Photo.destroy_all
 
 #Users
 guest = User.create!(username: "guest", password: "password",
-  profile_img_url: "http://res.cloudinary.com/dc4ro79uf/image/upload/v1484938583/guestpp_j3pb6d.jpg")
+  profile_img_url: "https://res.cloudinary.com/dc4ro79uf/image/upload/v1484938583/guestpp_j3pb6d.jpg")
 
 sports_news = User.create!(username: "sports_news", password: "espn123",
-  profile_img_url: "http://res.cloudinary.com/dc4ro79uf/image/upload/v1484938576/sportspp_yo73gx.jpg")
+  profile_img_url: "https://res.cloudinary.com/dc4ro79uf/image/upload/v1484938576/sportspp_yo73gx.jpg")
 
 game_of_thrones = User.create!(username: "gameofthrones", password: "password",
-  profile_img_url: "http://res.cloudinary.com/dc4ro79uf/image/upload/v1484938585/thronespp_foku8m.jpg",
+  profile_img_url: "https://res.cloudinary.com/dc4ro79uf/image/upload/v1484938585/thronespp_foku8m.jpg",
   followers: 5, followed: true)
 
 warriors = User.create!(username: "gs_warriors", password: "godubs",
-  profile_img_url: "http://res.cloudinary.com/dc4ro79uf/image/upload/v1484938589/warriorspp_soyphj.gif",
+  profile_img_url: "https://res.cloudinary.com/dc4ro79uf/image/upload/v1484938589/warriorspp_soyphj.gif",
   followers: 7, followed: true)
 
 giants = User.create!(username: "san_francisco_giants", password: "posey123",
-  profile_img_url: "http://res.cloudinary.com/dc4ro79uf/image/upload/v1484938587/giantspp_leqq4n.gif",
+  profile_img_url: "https://res.cloudinary.com/dc4ro79uf/image/upload/v1484938587/giantspp_leqq4n.gif",
   followers: 3, followed: true)
 
 michael_cady = User.create!(username: "mcady2012", password: "gotexans",
-  profile_img_url: "http://res.cloudinary.com/dc4ro79uf/image/upload/v1484938584/macpp_awvfxc.jpg",
+  profile_img_url: "https://res.cloudinary.com/dc4ro79uf/image/upload/v1484938584/macpp_awvfxc.jpg",
   followers: 6, followed: false)
 
 jack_reed = User.create!(username: "jreed949", password: "surfsup",
-  profile_img_url: "http://res.cloudinary.com/dc4ro79uf/image/upload/v1484938572/jackpp_urwmzz.jpg",
+  profile_img_url: "https://res.cloudinary.com/dc4ro79uf/image/upload/v1484938572/jackpp_urwmzz.jpg",
   followers: 4, followed: true)
 
 anna_ashe = User.create!(username: "anna-ashe", password: "hianna",
-  profile_img_url: "http://res.cloudinary.com/dc4ro79uf/image/upload/v1484938570/annapp_ehwevb.jpg",
+  profile_img_url: "https://res.cloudinary.com/dc4ro79uf/image/upload/v1484938570/annapp_ehwevb.jpg",
   followers: 8, followed: false)
 
 kelly_hanna = User.create!(username: "hi_its_kelly", password: "hannak",
-  profile_img_url: "http://res.cloudinary.com/dc4ro79uf/image/upload/v1484938568/kellypp_jw4lnt.jpg",
+  profile_img_url: "https://res.cloudinary.com/dc4ro79uf/image/upload/v1484938568/kellypp_jw4lnt.jpg",
   followers: 6, followed: true)
 
 lindsay_smith = User.create!(username: "lsmith43", password: "youllneverguessit",
-  profile_img_url: "http://res.cloudinary.com/dc4ro79uf/image/upload/v1484938566/lindsaypp_awbai5.jpg",
+  profile_img_url: "https://res.cloudinary.com/dc4ro79uf/image/upload/v1484938566/lindsaypp_awbai5.jpg",
   followers: 7, followed: false)
 
 Photo.create!(
@@ -70,16 +70,16 @@ Photo.create!(
 
 Photo.create!(
   user_id: game_of_thrones.id,
-  image_url: "http://res.cloudinary.com/dc4ro79uf/image/upload/v1484939373/winter_qudpym.jpg",
+  image_url: "https://res.cloudinary.com/dc4ro79uf/image/upload/v1484939373/winter_qudpym.jpg",
   caption: "Winter is here.")
 
 
 Photo.create!(
   user_id: warriors.id,
-  image_url: "http://fansided.com/files/2014/12/stephen-curry-nba-orlando-magic-golden-state-warriors4.jpg",
+  image_url: "https://fansided.com/files/2014/12/stephen-curry-nba-orlando-magic-golden-state-warriors4.jpg",
   caption: "Steph selected to his fifth straight all star game. Heading into the break he leads the NBA with 142 three-pointers and is second in overall scoring.")
 
 Photo.create!(
   user_id: giants.id,
-  image_url: "http://res.cloudinary.com/dc4ro79uf/image/upload/v1484939414/att_kiupcm.jpg",
+  image_url: "https://res.cloudinary.com/dc4ro79uf/image/upload/v1484939414/att_kiupcm.jpg",
   caption: "Home sweet home. The giants were 50-32 at AT&T park last season. ")

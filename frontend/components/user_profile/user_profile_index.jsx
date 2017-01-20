@@ -11,7 +11,6 @@ class UserProfileIndex extends React.Component {
   }
 
   componentDidMount() {
-    console.log("mount");
     this.props.fetchPhotos(this.props.params.userId);
     this.props.fetchUser(this.props.params.userId);
   }
@@ -22,7 +21,6 @@ class UserProfileIndex extends React.Component {
 
   componentWillUpdate(newProps) {
     if (this.props.params.userId !== newProps.params.userId) {
-      console.log("update");
       this.props.fetchPhotos(newProps.params.userId);
       this.props.fetchUser(newProps.params.userId);
     }
@@ -30,7 +28,6 @@ class UserProfileIndex extends React.Component {
 
 
   render() {
-    console.log("render");
     return (
 
       <div className="user-profile" >

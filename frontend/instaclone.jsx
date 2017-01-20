@@ -4,7 +4,7 @@ import Root from './components/root';
 
 import configureStore from './store/store';
 import { login, logout } from './actions/session_actions';
-import { fetchPhoto, fetchPhotos, createPhoto } from './actions/photo_actions';
+import { fetchPhoto, fetchPhotos, createPhoto, fetchFollowedPhotos } from './actions/photo_actions';
 import { fetchUser, updateUser } from './actions/user_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.fetchPhoto = fetchPhoto;
   window.fetchPhotos = fetchPhotos;
   window.createPhoto = createPhoto;
+  window.fetchFollowedPhotos = fetchFollowedPhotos;
 
   // user actions
   window.fetchUser = fetchUser;

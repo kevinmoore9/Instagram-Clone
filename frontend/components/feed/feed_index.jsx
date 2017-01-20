@@ -8,7 +8,7 @@ class FeedIndex extends React.Component {
   }
 
   componentDidMount() {
-      this.props.fetchPhotos();
+      this.props.fetchFollowedPhotos();
   }
 
   render() {

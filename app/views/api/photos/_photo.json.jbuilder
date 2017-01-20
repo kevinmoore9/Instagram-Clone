@@ -12,3 +12,4 @@
   json.user_id photo.user.id
   json.username photo.user.username
   json.user_profile_url photo.user.profile_img_url
+  json.followed photo.user.followed

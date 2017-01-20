@@ -3,7 +3,8 @@ import { createPhoto,
          fetchPhoto,
          fetchPhotos,
         updatePhoto,
-        createComment } from '../../actions/photo_actions';
+        createComment,
+        fetchFollowedPhotos} from '../../actions/photo_actions';
 import FeedIndex from './feed_index';
 
 const mapStateToProps = ({photos}) => ({
@@ -13,7 +14,8 @@ const mapStateToProps = ({photos}) => ({
 const mapDispatchToProps = (dispatch) => ({
   updatePhoto: photo => dispatch(updatePhoto(photo)),
   createComment: comment => dispatch(createComment(comment)),
-  fetchPhotos: () => dispatch(fetchPhotos())
+  fetchPhotos: () => dispatch(fetchPhotos()),
+  fetchFollowedPhotos: () => dispatch(fetchFollowedPhotos())
 });
 
 export default connect(

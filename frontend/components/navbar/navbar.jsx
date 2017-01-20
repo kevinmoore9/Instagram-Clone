@@ -16,7 +16,7 @@ class NavBar extends React.Component {
     store.dispatch(logout());
     window.setTimeout(function () {
       hashHistory.push('/login');
-    }, 100);
+    }, 300);
   }
 
   render() {

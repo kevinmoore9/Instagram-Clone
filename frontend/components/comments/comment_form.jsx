@@ -82,8 +82,8 @@ class CommentForm extends React.Component {
           <img className="like-button"
                src={
                  this.props.photo.liked
-                    ? "http://www.followers.co.il/wp-content/uploads/2016/01/1-2.png"
-                    : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Ei-heart.svg/2000px-Ei-heart.svg.png"
+                    ? "http://res.cloudinary.com/dc4ro79uf/image/upload/v1485238048/heart_gdavjf.png"
+                    : "http://res.cloudinary.com/dc4ro79uf/image/upload/v1485238086/blackheart_dyacg4.png"
                   }
 
                onClick={this.handleLike}

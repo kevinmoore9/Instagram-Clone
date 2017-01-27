@@ -39,8 +39,14 @@ export const createComment = params => {
 );
 };
 
+// Below not in user
 
-
-// destroy
-
-// fetch photos for individual user (profile) and users (feed)
+export const createLike = params => {
+  return (
+    $.ajax({
+      method: 'POST',
+      url: 'api/comments',
+      data: params
+    })
+  );
+};

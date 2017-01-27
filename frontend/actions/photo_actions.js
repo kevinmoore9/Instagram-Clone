@@ -59,5 +59,17 @@ export const createComment = params => dispatch => {
 };
 
 
+// Below not in use !!!
 
-// Add error callbacks for debugging
+export const RECEIVE_LIKE = "RECEIVE_LIKE";
+export const receiveLike = (like) => ({
+  type: RECEIVE_LIKE,
+  like
+});
+
+export const createLike = params => dispatch => {
+  return (
+    PhotoApiUtil.createLike(params)
+      .then( like => dispatch(receiveLike(like)))
+  );
+};

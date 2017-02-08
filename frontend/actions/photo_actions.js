@@ -3,6 +3,9 @@ import * as PhotoApiUtil from '../util/photo_api_util';
 export const RECEIVE_PHOTOS = "RECEIVE_PHOTOS";
 export const RECEIVE_PHOTO = "RECEIVE_PHOTO";
 export const RECEIVE_COMMENT = "RECEIVE_COMMENT";
+export const RECEIVE_LIKE = "RECEIVE_LIKE";
+export const REMOVE_LIKE = "REMOVE_LIKE";
+
 export const RECEIVE_FOLLOWED_PHOTOS = "RECEIVE_FOLLOWED_PHOTOS";
 
 export const receiveComment = (comment) => ({
@@ -31,7 +34,7 @@ export const fetchFollowedPhotos = () => dispatch => (
 );
 export const createPhoto = params => dispatch => (
   PhotoApiUtil.createPhoto(params)
-    .then(photo => dispatch(receivePhoto))
+    .then(photo => dispatch(receivePhoto(photo)))
 );
 
 export const updatePhoto = (params) => dispatch => {
@@ -58,18 +61,26 @@ export const createComment = params => dispatch => {
 );
 };
 
+export const createLike = params => dispatch => {
+  return (
+  PhotoApiUtil.createLike(params)
+    .then(photo => dispatch(receiveLike(photo)))
+);
+};
 
-// Below not in use !!!
+export const deleteLike = params => dispatch => {
+  return (
+  PhotoApiUtil.deleteLike(params)
+    .then(like => dispatch(removeLike(like)))
+);
+};
 
-export const RECEIVE_LIKE = "RECEIVE_LIKE";
 export const receiveLike = (like) => ({
   type: RECEIVE_LIKE,
   like
 });
 
-export const createLike = params => dispatch => {
-  return (
-    PhotoApiUtil.createLike(params)
-      .then( like => dispatch(receiveLike(like)))
-  );
-};
+export const removeLike = (like) => ({
+  type: REMOVE_LIKE,
+  like
+});

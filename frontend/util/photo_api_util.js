@@ -33,19 +33,27 @@ export const createComment = params => {
   return (
   $.ajax ({
     method: 'POST',
-    url: 'api/comments',
+    url: 'api/comments/',
     data: params
   })
 );
 };
 
-// Below not in user
-
 export const createLike = params => {
-  return (
+  return(
     $.ajax({
       method: 'POST',
-      url: 'api/comments',
+      url: 'api/likes/',
+      data: params
+    })
+  );
+};
+
+export const deleteLike = params => {
+  return(
+    $.ajax({
+      method: 'DELETE',
+      url: `api/likes/${params.id}/`,
       data: params
     })
   );

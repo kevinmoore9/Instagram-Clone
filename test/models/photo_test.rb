@@ -8,8 +8,6 @@
 #  caption    :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  liked      :boolean          default("false")
-#  likes      :integer          default("0")
 #
 
 require 'test_helper'

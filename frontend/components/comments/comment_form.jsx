@@ -10,12 +10,18 @@ class CommentForm extends React.Component {
         photo_id: 1,
         body: ""
     };
+
+    let like = null;
+
     this.update = this.update.bind(this);
     this.updatePhoto = props.updatePhoto.bind(this);
     this.createComment = props.createComment.bind(this);
+    this.createLike = props.createLike.bind(this);
+    this.deleteLike = props.deleteLike.bind(this);
     this.handleLike = this.handleLike.bind(this);
     this.handleComment = this.handleComment.bind(this);
-
+    this.handleLike = this.handleLike.bind(this);
+    this.handleUnlike = this.handleUnlike.bind(this);
   }
 
 
@@ -45,14 +51,15 @@ class CommentForm extends React.Component {
   }
 
   handleLike() {
-    if (this.props.photo.liked === true) {
-      this.props.photo.likes = this.props.photo.likes - 1;
-      this.props.photo.liked = false;
-    } else {
-      this.props.photo.likes = this.props.photo.likes + 1;
-      this.props.photo.liked = true;
-    }
-    this.updatePhoto({photo: this.props.photo});
+    this.createLike({like: {
+      photo_id: this.props.photo.id,
+      user_id: this.state.user_id
+    }});
+  }
+
+  handleUnlike(e) {
+   this.deleteLike({id: this.like.id});
+   this.like = null;
   }
 
   handleComment() {
@@ -63,12 +70,20 @@ class CommentForm extends React.Component {
 
 
   render () {
-    const like = this.props.photo.likes === 1 ? "like" : "likes";
+    const likeWord = this.props.photo.likes.length === 1 ? "like" : "likes";
+
+    this.props.photo.likes.forEach(l => {
+      if (l.user_id === this.state.user_id) {
+        this.like = l;
+      }
+    });
+
+    const liked = this.like ? true : false;
     const comment = "";
     return (
       <div className="comment-section">
         <div className="likes">
-          <p> {this.props.photo.likes} {like}</p>
+          <p> {this.props.photo.likes.length} {likeWord}</p>
         </div>
         <div className="comment">
           <h2 className="username">{this.props.photo.username}</h2>
@@ -81,12 +96,12 @@ class CommentForm extends React.Component {
         <div className="form">
           <img className="like-button"
                src={
-                 this.props.photo.liked
+                 liked
                     ? "https://res.cloudinary.com/dc4ro79uf/image/upload/v1485238048/heart_gdavjf.png"
                     : "https://res.cloudinary.com/dc4ro79uf/image/upload/v1485238086/blackheart_dyacg4.png"
                   }
 
-               onClick={this.handleLike}
+               onClick={liked ? this.handleUnlike : this.handleLike}
                />
              <form onSubmit={this.handleComment}>
                <input

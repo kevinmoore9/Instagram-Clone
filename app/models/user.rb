@@ -9,7 +9,8 @@
 #  session_token   :string           not null
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
-#  followers       :integer          is an Array
+#  followed        :boolean          default("false")
+#  followers       :integer          default("0")
 #
 
 class User < ApplicationRecord

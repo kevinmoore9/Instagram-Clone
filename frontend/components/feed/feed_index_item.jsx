@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router';
 import CommentForm from '../comments/comment_form';
 
-const FeedIndexItem = ({photo, updatePhoto, createComment}) => {
+const FeedIndexItem = ({photo, updatePhoto, createLike, deleteLike, createComment}) => {
   let user = photo.username;
   return (
     <div className="feed-index-item">
@@ -16,12 +16,11 @@ const FeedIndexItem = ({photo, updatePhoto, createComment}) => {
       <img className="index-img"src={photo.image_url}></img>
       <CommentForm photo={photo}
                    updatePhoto={updatePhoto}
-                   createComment={createComment}/>
+                   createComment={createComment}
+                   createLike={createLike}
+                   deleteLike={deleteLike}/>
     </div>
   );
 };
 
 export default withRouter(FeedIndexItem);
-
-
-// change photo={photo} to comments={photo.comments}

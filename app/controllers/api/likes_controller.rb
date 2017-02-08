@@ -3,13 +3,13 @@ class Api::LikesController < ApplicationController
   def create
     @like = Like.new(like_params)
     @like.save
-    render :index
+    render :show
   end
 
   def destroy
     @like = Like.find(params[:id])
     @like.destroy
-    render :index
+    render :show
   end
 
   def index
@@ -17,7 +17,7 @@ class Api::LikesController < ApplicationController
   end
 
   def like_params
-    params.require(:like).permit(:user_id, :photo_id)
+    params.require(:like).permit(:user_id, :photo_id, :id)
   end
 
 end

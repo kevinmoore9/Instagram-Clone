@@ -14,13 +14,14 @@ class FeedIndex extends React.Component {
 
   render() {
     return (
-
         <div className="feed-index-container" >
           {this.props.photos.reverse().map(
             photo => <FeedIndexItem
                         key={photo.id}
                         photo={photo}
                         updatePhoto={this.props.updatePhoto}
+                        createLike={this.props.createLike}
+                        deleteLike={this.props.deleteLike}
                         createComment={this.props.createComment} />
           )}
           <p className="explore"

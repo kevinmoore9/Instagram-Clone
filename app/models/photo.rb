@@ -8,18 +8,13 @@
 #  caption    :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  liked      :boolean          default("false")
-#  likes      :integer          default("0")
 #
 
 class Photo < ApplicationRecord
   belongs_to :user
   has_many :comments
+  has_many :likes
   validates :user_id, :image_url, presence: true
-  after_initialize :init
 
 
-  def init
-    self.liked ||= false
-  end
 end

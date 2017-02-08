@@ -2,6 +2,8 @@ import { connect } from 'react-redux';
 import { createPhoto,
          fetchPhoto,
          fetchPhotos,
+         createLike,
+         deleteLike,
         updatePhoto,
         createComment,
         fetchFollowedPhotos} from '../../actions/photo_actions';
@@ -14,6 +16,8 @@ const mapStateToProps = ({photos}) => ({
 const mapDispatchToProps = (dispatch) => ({
   updatePhoto: photo => dispatch(updatePhoto(photo)),
   createComment: comment => dispatch(createComment(comment)),
+  createLike: like => dispatch(createLike(like)),
+  deleteLike: like => dispatch(deleteLike(like)),
   fetchPhotos: () => dispatch(fetchPhotos()),
   fetchFollowedPhotos: () => dispatch(fetchFollowedPhotos())
 });

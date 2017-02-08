@@ -8,7 +8,7 @@ and a PostgreSQL database.
 
 ![alttag](./docs/photo_feed.png)
 ## Features
-
+s
 * User account creation and login with secure authentication
 * Photo uploading to a users profile page
 * Photo feed of your followed users

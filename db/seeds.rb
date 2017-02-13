@@ -83,3 +83,15 @@ Photo.create!(
   user_id: giants.id,
   image_url: "https://res.cloudinary.com/dc4ro79uf/image/upload/v1484939414/att_kiupcm.jpg",
   caption: "Home sweet home. The giants were 50-32 at AT&T park last season. ")
+
+Photo.create!(
+  user_id: lindsay_smith.id,
+  image_url: "https://res.cloudinary.com/dc4ro79uf/image/upload/v1484956769/bdovn9yefv1ef6ncrzk8.jpg",
+  caption: "Santa Barbara sunset!"
+)
+
+Photo.create!(
+  user_id: anna_ashe.id,
+  image_url: "https://res.cloudinary.com/dc4ro79uf/image/upload/v1484957319/amkqzizd7jogwhl5bzls.jpg",
+  caption: "Love my city!"
+)

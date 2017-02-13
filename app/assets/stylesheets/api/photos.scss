@@ -8,6 +8,7 @@
   max-width: 550px;
   margin: auto;
   font-family: sans-serif;
+  background-color: #fafafa;
 }
 
 .feed-index-item {
@@ -97,5 +98,9 @@
 }
 
 .explore:hover {
+  opacity: 0.4;
+}
+
+.explore:active {
   opacity: 0.4;
 }

@@ -4,15 +4,27 @@
 
 #root {
   // display: flex;
+  height: 100%;
 }
+
 
 .login-form-container {
-  max-width: 350px;
+  width: 325px;
   justify-content: center;
-  margin: auto;
-  padding-top: 100px;
+  padding-top: 115px;
 }
 
+.main {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  min-width: 650px;
+  margin: auto;
+}
+.iPhone {
+  height: 600px;
+  margin-top: 20px;
+}
 
 .login-form-container * {
   background-color: white;
@@ -88,4 +100,25 @@
 a.login-toggle-link {
   color: #3897f0;
 
+}
+
+.footer {
+  background-color: inherit;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-top: 1px solid black;
+}
+
+.linkedin {
+  height: 70px;
+  background-color: inherit;
+}
+
+.github {
+  height: 66px;
+  position: relative;
+  bottom: 4px;
+  background-color: inherit;
 }

@@ -4,8 +4,8 @@ import request from 'superagent';
 import { Link, withRouter, hashHistory } from 'react-router';
 import NavBar from '../navbar/navbar';
 
-const CLOUDINARY_UPLOAD_PRESET = "kmoore-insta";
-const CLOUDINARY_UPLOAD_URL = "https://api.cloudinary.com/v1_1/dc4ro79uf/image/upload";
+const UPLOAD_PRESET = "kmoore-insta";
+const UPLOAD_URL = "https://api.cloudinary.com/v1_1/dc4ro79uf/image/upload";
 
 class PostForm extends React.Component {
   constructor(props) {
@@ -26,8 +26,8 @@ class PostForm extends React.Component {
   }
 
   handleImageUpload(file) {
-    let upload = request.post(CLOUDINARY_UPLOAD_URL)
-                        .field('upload_preset', CLOUDINARY_UPLOAD_PRESET)
+    let upload = request.post(UPLOAD_URL)
+                        .field('upload_preset', UPLOAD_PRESET)
                         .field('file', file);
 
     upload.end((err, response) => {

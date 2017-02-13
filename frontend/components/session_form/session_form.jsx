@@ -72,6 +72,8 @@ class SessionForm extends React.Component {
 
 
 		return (
+			<div className="main">
+				<img className="iPhone" src="https://res.cloudinary.com/dc4ro79uf/image/upload/v1487028676/white-iphone_hfwqrn.png" />
 			<div className="login-form-container">
 				<div className="login-form-box">
 
@@ -107,10 +109,24 @@ class SessionForm extends React.Component {
 					<div className="toggle-login-box">
 						{toggleText} {this.navLink()}
 					</div>
+
 			</div>
+		</div>
 		);
 	}
 
 }
 
 export default withRouter(SessionForm);
+
+
+// <div className="footer">
+// 	<a href="https://www.linkedin.com/in/kevin-moore-867b94a6/">
+// 		<img className="linkedin"
+// 			src="http://www.myiconfinder.com/uploads/iconsets/3c9eaa4c8dd944eade4d976497f7c5e9.png" />
+// 	</a>
+// 	<a href="https://github.com/kevinmoore9">
+// 		<img className="github"
+// 			src="https://www.adamkozie.com/wordpress/wp-content/themes/ak-custom/images/github-icon.png" />
+// 	</a>
+// </div>

@@ -1,7 +1,6 @@
 import { RECEIVE_PHOTO,
          RECEIVE_PHOTOS,
-         RECEIVE_FOLLOWED_PHOTOS,
-         RECEIVE_COMMENT } from '../actions/photo_actions';
+         RECEIVE_FOLLOWED_PHOTOS } from '../actions/photo_actions';
 import merge from 'lodash/merge';
 
 const PhotosReducer = (oldState = {}, action) => {
@@ -23,18 +22,6 @@ const PhotosReducer = (oldState = {}, action) => {
         followedPhotos[i] = photos[i-1];
       }
       return followedPhotos;
-
-    case RECEIVE_COMMENT:
-      let newPhotoState = merge({}, oldState);
-      let photo;
-      for (let i=1; i<= Object.keys(newState).length; i++) {
-        if (newState[i].id === action.comment.photo) {
-          photo = i;
-        }
-      }
-      newPhotoState[photo].comments.push(action.comment);
-      return newPhotoState;
-
 
     default:
       return oldState;

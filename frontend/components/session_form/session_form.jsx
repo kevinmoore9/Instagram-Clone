@@ -73,7 +73,10 @@ class SessionForm extends React.Component {
 
 		return (
 			<div className="main">
-				<img className="iPhone" src="https://res.cloudinary.com/dc4ro79uf/image/upload/v1487028676/white-iphone_hfwqrn.png" />
+				<div className="main-image">
+					<img className="iPhone" src="https://res.cloudinary.com/dc4ro79uf/image/upload/v1487028676/white-iphone_hfwqrn.png" />
+					<img className="iphone-picture" src="https://res.cloudinary.com/dc4ro79uf/image/upload/v1487050820/Screen_Shot_2017-02-13_at_9.39.27_PM_nxn8dm.png" />
+				</div>
 			<div className="login-form-container">
 				<div className="login-form-box">
 

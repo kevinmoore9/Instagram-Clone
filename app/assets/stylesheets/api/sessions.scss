@@ -21,9 +21,22 @@
   min-width: 650px;
   margin: auto;
 }
+
+.main-image {
+  width: 305px;
+}
+
 .iPhone {
   height: 600px;
   margin-top: 20px;
+}
+
+.iphone-picture {
+  position: relative;
+  bottom: 530px;
+  height: 420px;
+  width: 260px;
+  left: 22px;
 }
 
 .login-form-container * {

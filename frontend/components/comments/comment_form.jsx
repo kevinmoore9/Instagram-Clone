@@ -58,8 +58,9 @@ class CommentForm extends React.Component {
   }
 
   handleUnlike(e) {
-   this.deleteLike({id: this.like.id});
-   this.like = null;
+    const like = this.like;
+    this.like = null;
+    this.deleteLike({id: like.id});
   }
 
   handleComment() {
@@ -71,7 +72,6 @@ class CommentForm extends React.Component {
 
   render () {
     const likeWord = this.props.photo.likes.length === 1 ? "like" : "likes";
-
     this.props.photo.likes.forEach(l => {
       if (l.user_id === this.state.user_id) {
         this.like = l;

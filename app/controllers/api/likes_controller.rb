@@ -1,15 +1,17 @@
 class Api::LikesController < ApplicationController
 
   def create
-    @like = Like.new(like_params)
-    @like.save
-    render :show
+    like = Like.new(like_params)
+    like.save
+    @photo = Photo.find(like.photo_id)
+    render 'api/photos/show'
   end
 
   def destroy
-    @like = Like.find(params[:id])
-    @like.destroy
-    render :show
+    like = Like.find(params[:id])
+    @photo = Photo.find(like.photo_id)
+    like.destroy
+    render 'api/photos/show'
   end
 
   def index

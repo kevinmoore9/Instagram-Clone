@@ -1,6 +1,6 @@
 import React from 'react';
 import Dropzone from 'react-dropzone';
-import request from 'superagent';
+import upload from 'superagent';
 import { Link, withRouter, hashHistory } from 'react-router';
 import NavBar from '../navbar/navbar';
 
@@ -26,7 +26,7 @@ class PostForm extends React.Component {
   }
 
   handleImageUpload(file) {
-    let upload = request.post(UPLOAD_URL)
+    let upload = upload.post(UPLOAD_URL)
                         .field('upload_preset', UPLOAD_PRESET)
                         .field('file', file);
 

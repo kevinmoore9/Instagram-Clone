@@ -8,10 +8,12 @@ export const receiveUser = (user) => ({
 });
 
 
-export const fetchUser = id => dispatch => (
-  UserApiUtil.fetchUser(id)
-    .then(user => dispatch(receiveUser(user)))
-);
+export const fetchUser = id => dispatch => {
+  return (
+    UserApiUtil.fetchUser(id)
+      .then(user => dispatch(receiveUser(user)))
+  );
+};
 
 export const updateUser = params => dispatch => {
   return (UserApiUtil.updateUser(params)

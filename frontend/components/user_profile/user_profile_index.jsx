@@ -1,16 +1,17 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router';
 import { fetchUser, updateUser } from '../../actions/user_actions';
-// import ProfileIndexItem from './profile_index_item';
 import ProfileHeader from './profile_header';
 import NavBar from '../navbar/navbar';
 
 class UserProfileIndex extends React.Component {
   constructor(props) {
     super(props);
+    this.profileDetail = null;
+    this.photos = null;
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.props.fetchPhotos(this.props.params.userId);
     this.props.fetchUser(this.props.params.userId);
   }
@@ -26,10 +27,8 @@ class UserProfileIndex extends React.Component {
     }
   }
 
-
-  render() {
-    return (
-
+  renderProfile() {
+    return(
       <div className="user-profile" >
         <ProfileHeader updateUser={this.props.updateUser}/>
         <div className="profile-index">
@@ -40,7 +39,14 @@ class UserProfileIndex extends React.Component {
         )}
         </div>
       </div>
+    );
+  }
 
+  render() {
+    console.log('render');
+    const photos = Object.values(store.getState().photos);
+    return (
+       photos.every(photo => photo.user_id == this.props.params.userId) ? this.renderProfile() : null
       );
   }
 }

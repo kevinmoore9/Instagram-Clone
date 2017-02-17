@@ -4,6 +4,7 @@ import { Link, withRouter } from 'react-router';
 const ProfileHeader = props => {
   const user = Object.assign({}, store.getState().profileDetail);
   const currentUser = store.getState().session.currentUser;
+
   return (
     <div className="profile-header">
       <img src={user.profile_img_url}className="profile-picture"/>

@@ -35,7 +35,7 @@ jack_reed = User.create!(username: "jreed949", password: "surfsup",
   profile_img_url: "https://res.cloudinary.com/dc4ro79uf/image/upload/v1484938572/jackpp_urwmzz.jpg",
   followers: 4, followed: true)
 
-anna_ashe = User.create!(username: "anna-ashe", password: "hianna",
+chelseaaa = User.create!(username: "chelseaaa", password: "hianna",
   profile_img_url: "https://res.cloudinary.com/dc4ro79uf/image/upload/v1484938570/annapp_ehwevb.jpg",
   followers: 8, followed: false)
 
@@ -91,7 +91,7 @@ Photo.create!(
 )
 
 Photo.create!(
-  user_id: anna_ashe.id,
+  user_id: chelseaaa.id,
   image_url: "https://res.cloudinary.com/dc4ro79uf/image/upload/v1484957319/amkqzizd7jogwhl5bzls.jpg",
   caption: "Love my city!"
 )

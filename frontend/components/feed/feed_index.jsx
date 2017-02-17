@@ -6,13 +6,20 @@ import NavBar from '../navbar/navbar';
 class FeedIndex extends React.Component {
   constructor(props) {
     super(props);
+    this.received = false;
   }
 
-  componentDidMount() {
+  componentWillMount() {
       this.props.fetchFollowedPhotos();
   }
 
-  render() {
+  shouldComponentUpdate(newProps) {
+    this.received = true;
+    return newProps.photos !== this.props.photos;
+
+  }
+
+  renderFeed() {
     return (
         <div className="feed-index-container" >
           {this.props.photos.reverse().map(
@@ -30,6 +37,12 @@ class FeedIndex extends React.Component {
            </p>
         </div>
       );
+  }
+
+  render() {
+    return(
+      this.received ? this.renderFeed() : null
+    );
   }
 }
 

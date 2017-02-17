@@ -44,7 +44,6 @@ class UserProfileIndex extends React.Component {
   }
 
   render() {
-    console.log('render');
     const photos = Object.values(store.getState().photos);
     return (
        photos.every(photo => photo.user_id == this.props.params.userId) ? this.renderProfile() : null

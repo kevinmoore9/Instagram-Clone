@@ -46,7 +46,7 @@
 
 .upload-caption {
   background-color: white;
-  width: 548px;
+  width: 508px;
   height: 100px;
   border: 1px solid #D5D5D5;
   border-radius: 3px;
@@ -59,6 +59,10 @@
   height: 60px;
   background-color: white;
 
+}
+
+.post-input input {
+  padding: 0 20px;
 }
 
 .upload-button {

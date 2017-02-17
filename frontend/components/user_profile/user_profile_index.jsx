@@ -17,7 +17,8 @@ class UserProfileIndex extends React.Component {
   }
 
   shouldComponentUpdate(newProps) {
-    return true;
+    const photos = Object.values(store.getState().photos);
+    return photos.every(photo => photo.user_id == this.props.params.userId);
   }
 
   componentWillUpdate(newProps) {

@@ -59,9 +59,3 @@ const Root = ({ store }) => {
 };
 
 export default Root;
-
-// keep dyno awake
-var http = require("http");
-setInterval(function() {
-    http.get("http://kevinmoore.herokuapp.com");
-}, 1200000);

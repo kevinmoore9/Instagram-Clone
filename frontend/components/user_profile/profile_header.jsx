@@ -42,7 +42,7 @@ const ProfileHeader = props => {
           </div>
           <div>
             <p className="num">
-              15
+            7
             </p>
             <p>following</p>
           </div>

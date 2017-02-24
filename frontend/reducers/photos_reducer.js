@@ -11,9 +11,14 @@ const PhotosReducer = (oldState = {}, action) => {
 
     case RECEIVE_PHOTO:
       let newState = merge({}, oldState);
-      newState[action.photo.id] = null;
-      return merge(newState, {[action.photo.id]: action.photo});
-      // return merge({}, oldState, {[action.photo.id]: action.photo});
+      let photoId;
+      for (let i = 1; i <= Object.keys(newState).length; i++) {
+        if (newState[i].id === action.photo.id) {
+          photoId = i;
+        }
+      }
+      newState[photoId] = null;
+      return merge(newState, {[photoId]: action.photo});
 
     case RECEIVE_FOLLOWED_PHOTOS:
       let photos = Object.values(action.photos).filter(photo => photo.followed === true);

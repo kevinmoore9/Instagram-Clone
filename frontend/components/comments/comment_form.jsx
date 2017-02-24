@@ -45,12 +45,14 @@ class CommentForm extends React.Component {
   }
 
   update(e) {
+    e.preventDefault();
     return (
       this.setState({ body: e.currentTarget.value })
     );
   }
 
-  handleLike() {
+  handleLike(e) {
+    e.preventDefault();
     this.createLike({like: {
       photo_id: this.props.photo.id,
       user_id: this.state.user_id
@@ -58,12 +60,14 @@ class CommentForm extends React.Component {
   }
 
   handleUnlike(e) {
+    e.preventDefault();
     const like = this.like;
     this.like = null;
     this.deleteLike({id: like.id});
   }
 
-  handleComment() {
+  handleComment(e) {
+    e.preventDefault();
     this.state.photo_id = this.props.photo.id;
     this.createComment({comment: this.state});
     this.state.body = "";

@@ -20,7 +20,6 @@ class NavBar extends React.Component {
   }
 
   render() {
-
     return (
       <header>
         <div className="nav-bar">

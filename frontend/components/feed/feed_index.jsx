@@ -40,7 +40,6 @@ class FeedIndex extends React.Component {
   }
 
   render() {
-    console.log('feed');
     return(
       this.received ? this.renderFeed() : null
     );

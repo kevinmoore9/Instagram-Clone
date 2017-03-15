@@ -35,7 +35,7 @@ jack_reed = User.create!(username: "jreed949", password: "surfsup",
   profile_img_url: "https://res.cloudinary.com/dc4ro79uf/image/upload/v1484938572/jackpp_urwmzz.jpg",
   followers: 4, followed: true)
 
-chelseaaa = User.create!(username: "chelseaaa", password: "hianna",
+chelseaaa = User.create!(username: "alyyy", password: "hianna",
   profile_img_url: "https://res.cloudinary.com/dc4ro79uf/image/upload/v1484938570/annapp_ehwevb.jpg",
   followers: 8, followed: false)
 
@@ -82,6 +82,11 @@ Photo.create!(
   user_id: giants.id,
   image_url: "https://res.cloudinary.com/dc4ro79uf/image/upload/v1484939414/att_kiupcm.jpg",
   caption: "Home sweet home. The giants were 50-32 at AT&T park last season. ")
+
+Photo.create!(
+  user_id: michael_cady.id,
+  image_url: "https://res.cloudinary.com/dc4ro79uf/image/upload/v1489597473/world_ontebj.jpg",
+  caption: "Taking these past two years to travel has the world has been the greatest decision of my life! 🌎 🌎 ")
 
 Photo.create!(
   user_id: warriors.id,

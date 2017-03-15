@@ -69,15 +69,14 @@ Photo.create!(
   caption: "Ryan Tarnell getting back into mid-season form. Last year he had 47 catches and 11 TD's in only 13 games played.")
 
 Photo.create!(
-  user_id: game_of_thrones.id,
-  image_url: "https://res.cloudinary.com/dc4ro79uf/image/upload/v1484939373/winter_qudpym.jpg",
-  caption: "Winter is here.")
-
-
-Photo.create!(
   user_id: warriors.id,
   image_url: "https://fansided.com/files/2014/12/stephen-curry-nba-orlando-magic-golden-state-warriors4.jpg",
   caption: "Steph selected to his fifth straight all star game. Heading into the break he leads the NBA with 142 three-pointers and is second in overall scoring.")
+
+Photo.create!(
+  user_id: game_of_thrones.id,
+  image_url: "https://res.cloudinary.com/dc4ro79uf/image/upload/v1484939373/winter_qudpym.jpg",
+  caption: "Winter is here.")
 
 Photo.create!(
   user_id: giants.id,
@@ -85,13 +84,17 @@ Photo.create!(
   caption: "Home sweet home. The giants were 50-32 at AT&T park last season. ")
 
 Photo.create!(
-  user_id: lindsay_smith.id,
-  image_url: "https://res.cloudinary.com/dc4ro79uf/image/upload/v1484956769/bdovn9yefv1ef6ncrzk8.jpg",
-  caption: "Santa Barbara sunset!"
-)
+  user_id: warriors.id,
+  image_url: "https://res.cloudinary.com/dc4ro79uf/image/upload/v1489596919/kd-warriors_wwaewq.jpg",
+  caption: "Welcome to the Warriors Kevin Durant!")
+
+Photo.create!(
+user_id: lindsay_smith.id,
+image_url: "https://res.cloudinary.com/dc4ro79uf/image/upload/v1484956769/bdovn9yefv1ef6ncrzk8.jpg",
+caption: "Santa Barbara sunset!")
 
 Photo.create!(
   user_id: chelseaaa.id,
   image_url: "https://res.cloudinary.com/dc4ro79uf/image/upload/v1484957319/amkqzizd7jogwhl5bzls.jpg",
-  caption: "Love my city!"
+  caption: "Perfect day for a hike!"
 )

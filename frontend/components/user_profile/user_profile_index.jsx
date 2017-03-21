@@ -29,7 +29,6 @@ class UserProfileIndex extends React.Component {
   }
 
   componentWillUpdate(newProps) {
-    console.log(this.state.photo);
     if (this.props.params.userId !== newProps.params.userId) {
       this.props.fetchPhotos(newProps.params.userId);
       this.props.fetchUser(newProps.params.userId);
@@ -97,7 +96,6 @@ class UserProfileIndex extends React.Component {
   }
 
   render() {
-    console.log('render');
     const photos = Object.values(store.getState().photos);
     return (
        photos.every(photo => photo.user_id == this.props.params.userId) ? this.renderProfile() : null

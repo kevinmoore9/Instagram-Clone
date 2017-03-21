@@ -78,6 +78,11 @@ form {
   padding-right: 10px;
 }
 
+.comment-index-item p {
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
 .compress-comments {
   color: #999;
   line-height: 18px;

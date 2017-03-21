@@ -72,54 +72,50 @@ class SessionForm extends React.Component {
 
 
 		return (
-			<div>
-
-
-				<div className="main">
-					<div className="main-image">
-						<img className="iPhone" src="https://res.cloudinary.com/dc4ro79uf/image/upload/v1487028676/white-iphone_hfwqrn.png" />
-						<img className="iphone-picture" src="https://res.cloudinary.com/dc4ro79uf/image/upload/v1487050820/Screen_Shot_2017-02-13_at_9.39.27_PM_nxn8dm.png" />
-					</div>
-				<div className="login-form-container">
-					<div className="login-form-box">
-
-	  				<form onSubmit={this.handleSubmit}>
-	              <h2>Pixtagram</h2>
-	              <br/>
-	              <input
-	                type="text"
-	                placeholder="Username"
-	                value={this.state.username}
-	                onChange={this.update("username")}
-	                className="login-input" />
-	              <br/>
-	              <input
-	                type="password"
-	                placeholder="Password"
-	                value={this.state.password}
-	                onChange={this.update("password")}
-	                className="login-input" />
-	              <br/>
-	              <input type="submit" value={submitText} className="login-button"/>
-	              {this.renderErrors()}
-	              <br/><h3>OR</h3><br/>
-	          </form>
-						<form onSubmit={this.handleGuest}>
-							<input
-								id="guest-login"
-								type="submit"
-								value="Log in as guest" />
-						</form>
-					</div>
-
-						<div className="toggle-login-box">
-							{toggleText} {this.navLink()}
-						</div>
-
-				</div>
+			<div className="main">
+				<div className="main-image">
+					<img className="iPhone" src="https://res.cloudinary.com/dc4ro79uf/image/upload/v1487028676/white-iphone_hfwqrn.png" />
+					<img className="iphone-picture" src="https://res.cloudinary.com/dc4ro79uf/image/upload/v1487050820/Screen_Shot_2017-02-13_at_9.39.27_PM_nxn8dm.png" />
 			</div>
+			<div className="login-form-container">
+				<div className="login-form-box">
 
+  				<form onSubmit={this.handleSubmit}>
+              <h2>Pixtagram</h2>
+              <br/>
+              <input
+                type="text"
+                placeholder="Username"
+                value={this.state.username}
+                onChange={this.update("username")}
+                className="login-input" />
+              <br/>
+              <input
+                type="password"
+                placeholder="Password"
+                value={this.state.password}
+                onChange={this.update("password")}
+                className="login-input" />
+              <br/>
+              <input type="submit" value={submitText} className="login-button"/>
+              {this.renderErrors()}
+              <br/><h3>OR</h3><br/>
+          </form>
+					<form onSubmit={this.handleGuest}>
+						<input
+							id="guest-login"
+							type="submit"
+							value="Log in as guest" />
+					</form>
+				</div>
+
+					<div className="toggle-login-box">
+						{toggleText} {this.navLink()}
+					</div>
+
+			</div>
 		</div>
+
 		);
 	}
 

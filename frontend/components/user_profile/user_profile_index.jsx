@@ -3,7 +3,7 @@ import { Link, withRouter } from 'react-router';
 import { fetchUser, updateUser } from '../../actions/user_actions';
 import ProfileHeader from './profile_header';
 import NavBar from '../navbar/navbar';
-
+import CommentForm from '../comments/comment_form';
 import { Modal, Button } from 'react-bootstrap';
 
 
@@ -29,9 +29,13 @@ class UserProfileIndex extends React.Component {
   }
 
   componentWillUpdate(newProps) {
+    console.log(this.state.photo);
     if (this.props.params.userId !== newProps.params.userId) {
       this.props.fetchPhotos(newProps.params.userId);
       this.props.fetchUser(newProps.params.userId);
+    }
+    if (this.state.photo) {
+      this.state.photo = store.getState().photos[this.state.photo.id];
     }
   }
 
@@ -41,7 +45,6 @@ class UserProfileIndex extends React.Component {
 
   open(pic) {
     this.setState({showModal: true, photo: pic});
-    console.log(this.state);
   }
 
 
@@ -73,6 +76,11 @@ class UserProfileIndex extends React.Component {
                   <img className="modal-profile-img" src={this.state.photo.user_profile_url} />
                   <h2 className="modal-username">{this.state.photo.username}</h2>
                 </div>
+                <CommentForm photo={this.state.photo}
+                             updatePhoto={this.props.updatePhoto}
+                             createComment={this.props.createComment}
+                             createLike={this.props.createLike}
+                             deleteLike={this.props.deleteLike}/>
               </div>
           </div>
         </div>
@@ -89,6 +97,7 @@ class UserProfileIndex extends React.Component {
   }
 
   render() {
+    console.log('render');
     const photos = Object.values(store.getState().photos);
     return (
        photos.every(photo => photo.user_id == this.props.params.userId) ? this.renderProfile() : null

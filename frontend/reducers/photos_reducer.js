@@ -12,9 +12,15 @@ const PhotosReducer = (oldState = {}, action) => {
     case RECEIVE_PHOTO:
       let newState = merge({}, oldState);
       let photoId;
-      for (let i = 1; i <= Object.keys(newState).length; i++) {
-        if (newState[i].id === action.photo.id) {
-          photoId = i;
+      if (newState[action.photo.id]) {
+        if (newState[action.photo.id].id === action.photo.id) {
+          photoId = action.photo.id;  
+        }
+      } else {
+        for (let i = 1; i <= Object.keys(newState).length; i++) {
+          if (newState[i].id === action.photo.id) {
+            photoId = i;
+          }
         }
       }
       newState[photoId] = null;

@@ -4,12 +4,19 @@ import { fetchUser, updateUser } from '../../actions/user_actions';
 import ProfileHeader from './profile_header';
 import NavBar from '../navbar/navbar';
 
+import { Modal, Button } from 'react-bootstrap';
+
+
 class UserProfileIndex extends React.Component {
   constructor(props) {
     super(props);
     this.profileDetail = null;
     this.photos = null;
+    this.state = {showModal: false, photo: null};
+    this.open = this.open.bind(this);
+    this.close = this.close.bind(this);
   }
+
 
   componentWillMount() {
     this.props.fetchPhotos(this.props.params.userId);
@@ -28,7 +35,18 @@ class UserProfileIndex extends React.Component {
     }
   }
 
+  close() {
+    this.setState({showModal: false});
+  }
+
+  open(pic) {
+    this.setState({showModal: true, photo: pic});
+    console.log(this.state);
+  }
+
+
   renderProfile() {
+    let modalStyle = this.state.showModal ? "block" : "none";
     return(
       <div className="user-profile" >
         <ProfileHeader updateUser={this.props.updateUser}/>
@@ -36,9 +54,31 @@ class UserProfileIndex extends React.Component {
           {this.props.photos.map(
             photo => <img src={photo.image_url}
                           key={photo.id}
+                          onClick={() => this.open(photo)}
+
                           className="profile-index-image"/>
         )}
         </div>
+
+
+
+        { this.state.photo ?
+
+        <div className="modal" style={ {display: modalStyle} }>
+
+            <p>Username: {this.state.photo.username}</p>
+
+            <Button onClick={this.close}>Close</Button>
+
+        </div>
+
+        : null
+      }
+
+
+
+
+
       </div>
     );
   }

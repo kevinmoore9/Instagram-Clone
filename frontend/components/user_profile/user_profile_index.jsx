@@ -64,12 +64,16 @@ class UserProfileIndex extends React.Component {
 
         { this.state.photo ?
 
-        <div className="modal" style={ {display: modalStyle} }>
+        <div className="modal-background" style={ {display: modalStyle} }>
+          <h2 className="modal-close" onClick={this.close}>X</h2>
+          <div className="modal-main" >
+              <img src={this.state.photo.image_url} className="modal-img"/>
+              <div className="modal-sidebar">
+                <div className="sidebar-header">
 
-            <p>Username: {this.state.photo.username}</p>
-
-            <Button onClick={this.close}>Close</Button>
-
+                </div>
+              </div>
+          </div>
         </div>
 
         : null

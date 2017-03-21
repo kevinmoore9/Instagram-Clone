@@ -52,13 +52,17 @@ padding-right: 10px;
 
 }
 
+form {
+  width: 100%;
+}
 
 .comment-form {
   font-size: 15px;
   line-height: 18px;
   position: relative;
   top: -2px;
-  width: 450px;
+  // width: 450px;
+  width: 100%;
   font-weight: 100;
 }
 

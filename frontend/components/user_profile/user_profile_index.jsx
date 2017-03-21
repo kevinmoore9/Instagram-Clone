@@ -70,7 +70,8 @@ class UserProfileIndex extends React.Component {
               <img src={this.state.photo.image_url} className="modal-img"/>
               <div className="modal-sidebar">
                 <div className="sidebar-header">
-
+                  <img className="modal-profile-img" src={this.state.photo.user_profile_url} />
+                  <h2 className="modal-username">{this.state.photo.username}</h2>
                 </div>
               </div>
           </div>

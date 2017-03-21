@@ -59,6 +59,8 @@
   width: 935px;
   margin: 100px auto 0;
   display: flex;
+  min-height: 450px;
+  max-height: 600px;
 }
 
 .modal-close {
@@ -78,5 +80,30 @@
 
 .modal-img {
   width: 600px;
-  min-height: 450px;
+  height: inherit;
+}
+
+.modal-sidebar {
+  width: 335px;
+  height: inherit;
+  background: white;
+}
+.sidebar-header {
+  margin: 0 25px;
+  height: 85px;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+}
+
+.modal-profile-img {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+}
+
+.modal-username {
+  margin: 0 10px;
+  font-size: 18px;
+  font-weight: 300;
 }

@@ -1,6 +1,6 @@
 # Pixtagram
 
-[Pixtagram live](http://pixtagram.us)
+[Pixtagram live](http://www.pixtagram.us/)
 
 Pixtagram is a full stack web application clone of Instagram. It was built
 using ruby on rails in the backend, React.js with a Redux framework in the frontend,

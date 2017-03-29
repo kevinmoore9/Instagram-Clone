@@ -6,9 +6,8 @@ Pixtagram is a full stack web application clone of Instagram. It was built
 using ruby on rails in the backend, React.js with a Redux framework in the frontend,
 and a PostgreSQL database.
 
-![alttag](./docs/photo_feed.png)
+![alttag](./docs/user_profile.png)
 ## Features
-s
 * User account creation and login with secure authentication
 * Photo uploading to a users profile page
 * Photo feed of your followed users
